@@ -41,17 +41,17 @@ CONTENT
            01C : 4836;  -- 	AND Bit2
            01D : 381F;  -- 	JPOS Switch
            01E : 280F;  -- 	JUMP Tilt
-           01F : 0830;  -- 	LOAD DisplayS
+           01F : 0835;  -- 	LOAD DisplayF
            020 : 9809;  -- 	OUT Hex5
-           021 : 0835;  -- 	LOAD DisplayW
+           021 : 0834;  -- 	LOAD DisplayL
            022 : 9808;  -- 	OUT Hex4
-           023 : B81F;  -- 	LOADI 31
+           023 : 0833;  -- 	LOAD DisplayI
            024 : 9807;  -- 	OUT Hex3
-           025 : B804;  -- 	LOADI 4
+           025 : 082E;  -- 	LOAD DisplayP
            026 : 9806;  -- 	OUT Hex2
            027 : B81F;  -- 	LOADI 31
            028 : 9805;  -- 	OUT Hex1
-           029 : B81F;  -- 	LOADI 31
+           029 : B801;  -- 	LOADI 1
            02A : 9804;  -- 	OUT Hex0
            02B : 9000;  -- 	IN Switches
            02C : 4000;  -- 	JZERO Push1
@@ -63,6 +63,6 @@ CONTENT
            032 : 0010;  -- DisplayT:	 DW &B10000
            033 : 0011;  -- DisplayI:	 DW &B10001
            034 : 0012;  -- DisplayL:	 DW &B10010
-           035 : 0017;  -- DisplayW:	 DW &B10111
+           035 : 0017;  -- DisplayF:	 DW &B10111
            036 : 0002;  -- Bit2:		 DW &B10
   END;

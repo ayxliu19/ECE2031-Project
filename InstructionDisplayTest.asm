@@ -43,17 +43,17 @@ Tilt:
 	JUMP Tilt
 
 Switch:
-	LOAD DisplayS
+	LOAD DisplayF
 	OUT Hex5
-	LOAD DisplayW
+	LOAD DisplayL
 	OUT Hex4
-	LOADI 31
+	LOAD DisplayI
 	OUT Hex3
-	LOADI 4
+	LOAD DisplayP
 	OUT Hex2
 	LOADI 31
 	OUT Hex1
-	LOADI 31
+	LOADI 1
 	OUT Hex0
 	
 	IN Switches
@@ -69,7 +69,7 @@ DisplayH:	 DW &B10110
 DisplayT:	 DW &B10000
 DisplayI:	 DW &B10001
 DisplayL:	 DW &B10010
-DisplayW:	 DW &B10111
+DisplayF:	 DW &B10111
 Bit2:		 DW &B10
 
 
