@@ -1,0 +1,70 @@
+-- Altera Memory Initialization File (MIF)
+
+DEPTH = 2048;
+WIDTH = 16;
+
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+
+CONTENT
+  BEGIN
+    [000..7FF] : 0000;  -- Default to NOP
+
+           000 : B801;  -- 	LOADI &B000001
+           001 : 98E0;  -- 	OUT DPs
+           002 : B800;  -- 	LOADI 0
+           003 : 2804;  -- 	JUMP HighWaste
+           004 : 6800;  -- 	ADDI 0
+           005 : 6800;  -- 	ADDI 0
+           006 : 6800;  -- 	ADDI 0
+           007 : 6800;  -- 	ADDI 0
+           008 : 6800;  -- 	ADDI 0
+           009 : 6800;  -- 	ADDI 0
+           00A : 6800;  -- 	ADDI 0
+           00B : 6800;  -- 	ADDI 0
+           00C : 6800;  -- 	ADDI 0
+           00D : 6800;  -- 	ADDI 0
+           00E : 6800;  -- 	ADDI 0
+           00F : 6800;  -- 	ADDI 0
+           010 : 6800;  -- 	ADDI 0
+           011 : 6800;  -- 	ADDI 0
+           012 : 6800;  -- 	ADDI 0
+           013 : 6800;  -- 	ADDI 0
+           014 : 6800;  -- 	ADDI 0
+           015 : 6800;  -- 	ADDI 0
+           016 : 6800;  -- 	ADDI 0
+           017 : 6800;  -- 	ADDI 0
+           018 : 6800;  -- 	ADDI 0
+           019 : 6800;  -- 	ADDI 0
+           01A : 6801;  -- 	ADDI 1
+           01B : 401D;  -- 	JZERO Low
+           01C : 2804;  -- 	JUMP HighWaste
+           01D : B800;  -- 	LOADI 0
+           01E : 98E0;  -- 	OUT DPs
+           01F : 2820;  -- 	JUMP LowWaste
+           020 : 6800;  -- 	ADDI 0
+           021 : 6800;  -- 	ADDI 0
+           022 : 6800;  -- 	ADDI 0
+           023 : 6800;  -- 	ADDI 0
+           024 : 6800;  -- 	ADDI 0
+           025 : 6800;  -- 	ADDI 0
+           026 : 6800;  -- 	ADDI 0
+           027 : 6800;  -- 	ADDI 0
+           028 : 6800;  -- 	ADDI 0
+           029 : 6800;  -- 	ADDI 0
+           02A : 6800;  -- 	ADDI 0
+           02B : 6800;  -- 	ADDI 0
+           02C : 6800;  -- 	ADDI 0
+           02D : 6800;  -- 	ADDI 0
+           02E : 6800;  -- 	ADDI 0
+           02F : 6800;  -- 	ADDI 0
+           030 : 6800;  -- 	ADDI 0
+           031 : 6800;  -- 	ADDI 0
+           032 : 6800;  -- 	ADDI 0
+           033 : 6800;  -- 	ADDI 0
+           034 : 6800;  -- 	ADDI 0
+           035 : 6800;  -- 	ADDI 0
+           036 : 6801;  -- 	ADDI 1
+           037 : 4000;  -- 	JZERO High
+           038 : 2820;  -- 	JUMP LowWaste
+  END;

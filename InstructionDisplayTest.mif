@@ -1,0 +1,68 @@
+-- Altera Memory Initialization File (MIF)
+
+DEPTH = 2048;
+WIDTH = 16;
+
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+
+CONTENT
+  BEGIN
+    [000..7FF] : 0000;  -- Default to NOP
+
+           000 : 082E;  -- 	LOAD DisplayP
+           001 : 9809;  -- 	OUT Hex5
+           002 : 082F;  -- 	LOAD DisplayU
+           003 : 9808;  -- 	OUT Hex4
+           004 : 0830;  -- 	LOAD DisplayS
+           005 : 9807;  -- 	OUT Hex3
+           006 : 0831;  -- 	LOAD DisplayH
+           007 : 9806;  -- 	OUT Hex2
+           008 : B81F;  -- 	LOADI 31
+           009 : 9805;  -- 	OUT Hex1
+           00A : B801;  -- 	LOADI 1
+           00B : 9804;  -- 	OUT Hex0
+           00C : 9000;  -- 	IN Switches
+           00D : 380F;  -- 	JPOS Tilt
+           00E : 2800;  -- 	JUMP Push1
+           00F : 0832;  -- 	LOAD DisplayT
+           010 : 9809;  -- 	OUT Hex5
+           011 : 0833;  -- 	LOAD DisplayI
+           012 : 9808;  -- 	OUT Hex4
+           013 : 0834;  -- 	LOAD DisplayL
+           014 : 9807;  -- 	OUT Hex3
+           015 : 0832;  -- 	LOAD DisplayT
+           016 : 9806;  -- 	OUT Hex2
+           017 : B81F;  -- 	LOADI 31
+           018 : 9805;  -- 	OUT Hex1
+           019 : B81F;  -- 	LOADI 31
+           01A : 9804;  -- 	OUT Hex0
+           01B : 9000;  -- 	IN Switches
+           01C : 4836;  -- 	AND Bit2
+           01D : 381F;  -- 	JPOS Switch
+           01E : 280F;  -- 	JUMP Tilt
+           01F : 0830;  -- 	LOAD DisplayS
+           020 : 9809;  -- 	OUT Hex5
+           021 : 0835;  -- 	LOAD DisplayW
+           022 : 9808;  -- 	OUT Hex4
+           023 : B81F;  -- 	LOADI 31
+           024 : 9807;  -- 	OUT Hex3
+           025 : B804;  -- 	LOADI 4
+           026 : 9806;  -- 	OUT Hex2
+           027 : B81F;  -- 	LOADI 31
+           028 : 9805;  -- 	OUT Hex1
+           029 : B81F;  -- 	LOADI 31
+           02A : 9804;  -- 	OUT Hex0
+           02B : 9000;  -- 	IN Switches
+           02C : 4000;  -- 	JZERO Push1
+           02D : 281F;  -- 	JUMP Switch
+           02E : 0013;  -- DisplayP:	 DW &B10011
+           02F : 0014;  -- DisplayU:	 DW &B10100
+           030 : 0015;  -- DisplayS:	 DW &B10101
+           031 : 0016;  -- DisplayH:	 DW &B10110
+           032 : 0010;  -- DisplayT:	 DW &B10000
+           033 : 0011;  -- DisplayI:	 DW &B10001
+           034 : 0012;  -- DisplayL:	 DW &B10010
+           035 : 0017;  -- DisplayW:	 DW &B10111
+           036 : 0002;  -- Bit2:		 DW &B10
+  END;
