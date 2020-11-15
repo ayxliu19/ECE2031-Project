@@ -16,20 +16,21 @@ ENTITY Music_Gen IS
 		RESETN,
 		CS       : IN STD_LOGIC;
 		IO_DATA  : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-		SQ       : OUT STD_LOGIC
+		SQ       : OUT STD_LOGIC;
+		
+		denom		: OUT STD_LOGIC_VECTOR (11 DOWNTO 0);
+		numer		: OUT STD_LOGIC_VECTOR (23 DOWNTO 0);
+		quotient	: IN STD_LOGIC_VECTOR (23 DOWNTO 0)
 	);
 END Music_Gen;
 
 
 ARCHITECTURE a OF Music_Gen IS
-	SIGNAL COUNT    : STD_LOGIC_VECTOR(11 DOWNTO 0);
-	SIGNAL COMPARE  : STD_LOGIC_VECTOR(11 DOWNTO 0);
+	SIGNAL COUNT    : STD_LOGIC_VECTOR(23 DOWNTO 0);
+	SIGNAL COMPARE  : STD_LOGIC_VECTOR(23 DOWNTO 0);
 	SIGNAL D        : STD_LOGIC;
 	
-	-- figure out how to do integer and arithmetic with IO data
-	SIGNAL IO_DATA_int    : integer := IO_DATA; 
-	
-	CONSTANT clock_val    : INTEGER := 10000000;
+	-- figure out how to do integer and arithmetic with IO data	
 	
 
 
@@ -39,12 +40,17 @@ ARCHITECTURE a OF Music_Gen IS
 	PROCESS (CLOCK, RESETN, CS)
 	BEGIN
 	
+		numer <= "010011000100101101000000"; -- (1/2) * 10MHz
+		denom <= IO_Data;
+	
 		-- Create a register to store the data sent from SCOMP
 		IF (RESETN = '0') THEN
-			COMPARE <= "0000";
+			COMPARE <= "000000000000000000000000";
 		ELSIF rising_edge(CS) THEN
 			-- When written to, latch IO_DATA into the compare register.
-			COMPARE <= clock_val*(1/IO_DATA_int)*(1/2);
+			-- compare = (1/2) * clock_speed / IO_data
+			COMPARE <= quotient;
+			
 			
 		END IF;
 		
@@ -56,7 +62,7 @@ ARCHITECTURE a OF Music_Gen IS
 			-- is directly the number of intervals (instead of
 			-- needing to subtract 1 on SCOMP's side).
 			IF (COUNT+1) >= COMPARE THEN
-				COUNT <= "0000";
+				COUNT <= "000000000000000000000000";
 				D <= not D;
 			-- else, increment counter
 			ELSE

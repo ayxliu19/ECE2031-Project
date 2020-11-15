@@ -213,4 +213,5 @@ set_location_assignment PIN_AB16 -to GSENSOR_CS_n
 set_location_assignment PIN_AB15 -to GSENSOR_SCLK
 set_global_assignment -name BDF_FILE Dps.bdf
 set_global_assignment -name VHDL_FILE Music_Gen.vhd
+set_global_assignment -name QIP_FILE Divider.qip
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
