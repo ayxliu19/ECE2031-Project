@@ -4,6 +4,10 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "Arduino_IO[1]",
+					"strict" : false
+				},
+				{
 					"name" : "Arduino_IO[0]",
 					"strict" : false
 				},
@@ -248,11 +252,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[5]",
+					"name" : "KEY0",
 					"strict" : false
 				},
 				{
-					"name" : "KEY0",
+					"name" : "SW[5]",
 					"strict" : false
 				},
 				{

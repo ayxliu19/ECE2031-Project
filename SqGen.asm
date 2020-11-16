@@ -2,13 +2,16 @@
 
 ORG 0
   ; Send the peripheral a value once at reset
-  IN   Switches
-  OUT  SqGen
+  LOADI 1760
+  OUT  MusicGen
 ; Enter an infinite loop, showing that SCOMP
 ; doesn't need to do anything and the peripheral
 ; will continue to generate the square wave.
-Here: JUMP Here
+	
+Here: jump Here
+	
 
 ; IO address constants
-Switches:  EQU &H000
-SqGen:		EQU &H0F0
+Switches:  		EQU &H000
+sqGen:			EQU &H0F0
+MusicGen:		EQU &H020

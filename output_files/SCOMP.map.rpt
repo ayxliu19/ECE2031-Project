@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SCOMP
-Tue Nov 03 23:00:05 2020
+Sun Nov 15 23:57:22 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -22,7 +22,7 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
  14. General Register Statistics
  15. Inverted Register Statistics
  16. Multiplexer Restructuring Statistics (Restructuring Performed)
- 17. Source assignments for SCOMP:inst|altsyncram:altsyncram_component|altsyncram_m7t3:auto_generated
+ 17. Source assignments for SCOMP:inst|altsyncram:altsyncram_component|altsyncram_scr3:auto_generated
  18. Parameter Settings for User Entity Instance: I2C_INTERFACE:inst13|i2c_master:inst
  19. Parameter Settings for User Entity Instance: PLL_main:inst1|altpll:altpll_component
  20. Parameter Settings for User Entity Instance: SCOMP:inst|altsyncram:altsyncram_component
@@ -30,11 +30,12 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
  22. Parameter Settings for User Entity Instance: SCOMP:inst|LPM_BUSTRI:io_bus
  23. Parameter Settings for User Entity Instance: TIMER:inst4|LPM_BUSTRI:IO_BUS
  24. Parameter Settings for User Entity Instance: DIG_IN:inst7|LPM_BUSTRI:IO_BUS
- 25. altpll Parameter Settings by Entity Instance
- 26. altsyncram Parameter Settings by Entity Instance
- 27. Post-Synthesis Netlist Statistics for Top Partition
- 28. Elapsed Time Per Partition
- 29. Analysis & Synthesis Messages
+ 25. Parameter Settings for User Entity Instance: Divider:inst17|lpm_divide:LPM_DIVIDE_component
+ 26. altpll Parameter Settings by Entity Instance
+ 27. altsyncram Parameter Settings by Entity Instance
+ 28. Post-Synthesis Netlist Statistics for Top Partition
+ 29. Elapsed Time Per Partition
+ 30. Analysis & Synthesis Messages
 
 
 
@@ -61,16 +62,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 03 23:00:04 2020       ;
+; Analysis & Synthesis Status        ; Successful - Sun Nov 15 23:57:22 2020       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; SCOMP                                       ;
 ; Top-level Entity Name              ; SCOMP_System                                ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 1,068                                       ;
-;     Total combinational functions  ; 931                                         ;
-;     Dedicated logic registers      ; 425                                         ;
-; Total registers                    ; 425                                         ;
-; Total pins                         ; 75                                          ;
+; Total logic elements               ; 1,595                                       ;
+;     Total combinational functions  ; 1,458                                       ;
+;     Dedicated logic registers      ; 474                                         ;
+; Total registers                    ; 474                                         ;
+; Total pins                         ; 76                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 32,768                                      ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -181,8 +182,8 @@ https://fpgasoftware.intel.com/eula.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.1%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -205,6 +206,8 @@ https://fpgasoftware.intel.com/eula.
 ; PLL_main.vhd                     ; yes             ; User Wizard-Generated File             ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/PLL_main.vhd               ;         ;
 ; HEX_DISP_6.bdf                   ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/HEX_DISP_6.bdf             ;         ;
 ; Dps.bdf                          ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/Dps.bdf                    ;         ;
+; MusicGen.vhd                     ; yes             ; User VHDL File                         ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/MusicGen.vhd               ;         ;
+; Divider.vhd                      ; yes             ; User Wizard-Generated File             ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/Divider.vhd                ;         ;
 ; altpll.tdf                       ; yes             ; Megafunction                           ; c:/users/broughton/desktop/quartus/libraries/megafunctions/altpll.tdf                                                   ;         ;
 ; aglobal191.inc                   ; yes             ; Megafunction                           ; c:/users/broughton/desktop/quartus/libraries/megafunctions/aglobal191.inc                                               ;         ;
 ; stratix_pll.inc                  ; yes             ; Megafunction                           ; c:/users/broughton/desktop/quartus/libraries/megafunctions/stratix_pll.inc                                              ;         ;
@@ -219,12 +222,20 @@ https://fpgasoftware.intel.com/eula.
 ; altrom.inc                       ; yes             ; Megafunction                           ; c:/users/broughton/desktop/quartus/libraries/megafunctions/altrom.inc                                                   ;         ;
 ; altram.inc                       ; yes             ; Megafunction                           ; c:/users/broughton/desktop/quartus/libraries/megafunctions/altram.inc                                                   ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                           ; c:/users/broughton/desktop/quartus/libraries/megafunctions/altdpram.inc                                                 ;         ;
-; db/altsyncram_m7t3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/altsyncram_m7t3.tdf     ;         ;
-; InstructionDisplayTest.mif       ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/InstructionDisplayTest.mif ;         ;
+; db/altsyncram_scr3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/altsyncram_scr3.tdf     ;         ;
+; sqgen.mif                        ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/sqgen.mif                  ;         ;
 ; lpm_clshift.tdf                  ; yes             ; Megafunction                           ; c:/users/broughton/desktop/quartus/libraries/megafunctions/lpm_clshift.tdf                                              ;         ;
 ; db/lpm_clshift_fuc.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/lpm_clshift_fuc.tdf     ;         ;
 ; lpm_bustri.tdf                   ; yes             ; Megafunction                           ; c:/users/broughton/desktop/quartus/libraries/megafunctions/lpm_bustri.tdf                                               ;         ;
 ; sq_gen.vhd                       ; yes             ; Auto-Found VHDL File                   ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/sq_gen.vhd                 ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                           ; c:/users/broughton/desktop/quartus/libraries/megafunctions/lpm_divide.tdf                                               ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                           ; c:/users/broughton/desktop/quartus/libraries/megafunctions/abs_divider.inc                                              ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                           ; c:/users/broughton/desktop/quartus/libraries/megafunctions/sign_div_unsign.inc                                          ;         ;
+; db/lpm_divide_ldp.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/lpm_divide_ldp.tdf      ;         ;
+; db/sign_div_unsign_8nh.tdf       ; yes             ; Auto-Generated Megafunction            ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/sign_div_unsign_8nh.tdf ;         ;
+; db/alt_u_div_qke.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/alt_u_div_qke.tdf       ;         ;
+; db/add_sub_t3c.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/add_sub_t3c.tdf         ;         ;
+; db/add_sub_u3c.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/add_sub_u3c.tdf         ;         ;
 +----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -233,23 +244,23 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                  ;
 +---------------------------------------------+----------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 1,068                                                                                  ;
+; Estimated Total logic elements              ; 1,595                                                                                  ;
 ;                                             ;                                                                                        ;
-; Total combinational functions               ; 931                                                                                    ;
+; Total combinational functions               ; 1458                                                                                   ;
 ; Logic element usage by number of LUT inputs ;                                                                                        ;
-;     -- 4 input functions                    ; 512                                                                                    ;
-;     -- 3 input functions                    ; 325                                                                                    ;
-;     -- <=2 input functions                  ; 94                                                                                     ;
+;     -- 4 input functions                    ; 579                                                                                    ;
+;     -- 3 input functions                    ; 646                                                                                    ;
+;     -- <=2 input functions                  ; 233                                                                                    ;
 ;                                             ;                                                                                        ;
 ; Logic elements by mode                      ;                                                                                        ;
-;     -- normal mode                          ; 860                                                                                    ;
-;     -- arithmetic mode                      ; 71                                                                                     ;
+;     -- normal mode                          ; 1120                                                                                   ;
+;     -- arithmetic mode                      ; 338                                                                                    ;
 ;                                             ;                                                                                        ;
-; Total registers                             ; 425                                                                                    ;
-;     -- Dedicated logic registers            ; 425                                                                                    ;
+; Total registers                             ; 474                                                                                    ;
+;     -- Dedicated logic registers            ; 474                                                                                    ;
 ;     -- I/O registers                        ; 0                                                                                      ;
 ;                                             ;                                                                                        ;
-; I/O pins                                    ; 75                                                                                     ;
+; I/O pins                                    ; 76                                                                                     ;
 ; Total memory bits                           ; 32768                                                                                  ;
 ;                                             ;                                                                                        ;
 ; Embedded Multiplier 9-bit elements          ; 0                                                                                      ;
@@ -258,55 +269,60 @@ https://fpgasoftware.intel.com/eula.
 ;     -- PLLs                                 ; 1                                                                                      ;
 ;                                             ;                                                                                        ;
 ; Maximum fan-out node                        ; PLL_main:inst1|altpll:altpll_component|PLL_main_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 245                                                                                    ;
-; Total fan-out                               ; 4820                                                                                   ;
-; Average fan-out                             ; 3.16                                                                                   ;
+; Maximum fan-out                             ; 271                                                                                    ;
+; Total fan-out                               ; 6398                                                                                   ;
+; Average fan-out                             ; 3.04                                                                                   ;
 +---------------------------------------------+----------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                       ;
-+-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                     ; Entity Name     ; Library Name ;
-+-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------+-----------------+--------------+
-; |SCOMP_System                             ; 931 (0)             ; 425 (0)                   ; 32768       ; 0          ; 0            ; 0       ; 0         ; 75   ; 0            ; 0          ; |SCOMP_System                                                                           ; SCOMP_System    ; work         ;
-;    |DIG_IN:inst7|                         ; 0 (0)               ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|DIG_IN:inst7                                                              ; DIG_IN          ; work         ;
-;    |DIG_OUT:inst6|                        ; 0 (0)               ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|DIG_OUT:inst6                                                             ; DIG_OUT         ; work         ;
-;    |Dps:inst10|                           ; 0 (0)               ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|Dps:inst10                                                                ; Dps             ; work         ;
-;    |HEX_DISP_6:inst9|                     ; 102 (0)             ; 30 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9                                                          ; HEX_DISP_6      ; work         ;
-;       |HEX_DISP:inst1|                    ; 17 (17)             ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst1                                           ; HEX_DISP        ; work         ;
-;       |HEX_DISP:inst2|                    ; 17 (17)             ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst2                                           ; HEX_DISP        ; work         ;
-;       |HEX_DISP:inst3|                    ; 17 (17)             ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst3                                           ; HEX_DISP        ; work         ;
-;       |HEX_DISP:inst4|                    ; 17 (17)             ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst4                                           ; HEX_DISP        ; work         ;
-;       |HEX_DISP:inst5|                    ; 17 (17)             ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst5                                           ; HEX_DISP        ; work         ;
-;       |HEX_DISP:inst6|                    ; 17 (17)             ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst6                                           ; HEX_DISP        ; work         ;
-;    |I2C_INTERFACE:inst13|                 ; 216 (57)            ; 125 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|I2C_INTERFACE:inst13                                                      ; I2C_INTERFACE   ; work         ;
-;       |i2c_ctrl:inst14|                   ; 58 (58)             ; 70 (70)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14                                      ; i2c_ctrl        ; work         ;
-;       |i2c_master:inst|                   ; 101 (101)           ; 55 (55)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_master:inst                                      ; i2c_master      ; work         ;
-;    |IO_DECODER:inst3|                     ; 26 (26)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|IO_DECODER:inst3                                                          ; IO_DECODER      ; work         ;
-;    |PLL_main:inst1|                       ; 0 (0)               ; 1 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|PLL_main:inst1                                                            ; PLL_main        ; work         ;
-;       |altpll:altpll_component|           ; 0 (0)               ; 1 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|PLL_main:inst1|altpll:altpll_component                                    ; altpll          ; work         ;
-;          |PLL_main_altpll:auto_generated| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|PLL_main:inst1|altpll:altpll_component|PLL_main_altpll:auto_generated     ; PLL_main_altpll ; work         ;
-;    |SCOMP:inst|                           ; 491 (406)           ; 178 (178)                 ; 32768       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst                                                                ; SCOMP           ; work         ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 32768       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
-;          |altsyncram_m7t3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 32768       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component|altsyncram_m7t3:auto_generated ; altsyncram_m7t3 ; work         ;
-;       |lpm_clshift:shifter|               ; 85 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter                                            ; lpm_clshift     ; work         ;
-;          |lpm_clshift_fuc:auto_generated| ; 85 (85)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter|lpm_clshift_fuc:auto_generated             ; lpm_clshift_fuc ; work         ;
-;    |SQ_GEN:inst11|                        ; 14 (14)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SQ_GEN:inst11                                                             ; SQ_GEN          ; work         ;
-;    |TIMER:inst4|                          ; 33 (17)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|TIMER:inst4                                                               ; TIMER           ; work         ;
-;       |lpm_bustri:IO_BUS|                 ; 16 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|TIMER:inst4|lpm_bustri:IO_BUS                                             ; lpm_bustri      ; work         ;
-;    |clk_div:inst5|                        ; 49 (49)             ; 40 (40)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|clk_div:inst5                                                             ; clk_div         ; work         ;
-+-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------+-----------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                ;
++-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                          ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |SCOMP_System                             ; 1458 (0)            ; 474 (0)                   ; 32768       ; 0          ; 0            ; 0       ; 0         ; 76   ; 0            ; 0          ; |SCOMP_System                                                                                                                                ; SCOMP_System        ; work         ;
+;    |DIG_IN:inst7|                         ; 0 (0)               ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|DIG_IN:inst7                                                                                                                   ; DIG_IN              ; work         ;
+;    |DIG_OUT:inst6|                        ; 0 (0)               ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|DIG_OUT:inst6                                                                                                                  ; DIG_OUT             ; work         ;
+;    |Divider:inst17|                       ; 452 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|Divider:inst17                                                                                                                 ; Divider             ; work         ;
+;       |lpm_divide:LPM_DIVIDE_component|   ; 452 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|Divider:inst17|lpm_divide:LPM_DIVIDE_component                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_ldp:auto_generated|  ; 452 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|Divider:inst17|lpm_divide:LPM_DIVIDE_component|lpm_divide_ldp:auto_generated                                                   ; lpm_divide_ldp      ; work         ;
+;             |sign_div_unsign_8nh:divider| ; 452 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|Divider:inst17|lpm_divide:LPM_DIVIDE_component|lpm_divide_ldp:auto_generated|sign_div_unsign_8nh:divider                       ; sign_div_unsign_8nh ; work         ;
+;                |alt_u_div_qke:divider|    ; 452 (452)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|Divider:inst17|lpm_divide:LPM_DIVIDE_component|lpm_divide_ldp:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_qke:divider ; alt_u_div_qke       ; work         ;
+;    |Dps:inst10|                           ; 0 (0)               ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|Dps:inst10                                                                                                                     ; Dps                 ; work         ;
+;    |HEX_DISP_6:inst9|                     ; 102 (0)             ; 30 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9                                                                                                               ; HEX_DISP_6          ; work         ;
+;       |HEX_DISP:inst1|                    ; 17 (17)             ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst1                                                                                                ; HEX_DISP            ; work         ;
+;       |HEX_DISP:inst2|                    ; 17 (17)             ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst2                                                                                                ; HEX_DISP            ; work         ;
+;       |HEX_DISP:inst3|                    ; 17 (17)             ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst3                                                                                                ; HEX_DISP            ; work         ;
+;       |HEX_DISP:inst4|                    ; 17 (17)             ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst4                                                                                                ; HEX_DISP            ; work         ;
+;       |HEX_DISP:inst5|                    ; 17 (17)             ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst5                                                                                                ; HEX_DISP            ; work         ;
+;       |HEX_DISP:inst6|                    ; 17 (17)             ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst6                                                                                                ; HEX_DISP            ; work         ;
+;    |I2C_INTERFACE:inst13|                 ; 224 (66)            ; 125 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|I2C_INTERFACE:inst13                                                                                                           ; I2C_INTERFACE       ; work         ;
+;       |i2c_ctrl:inst14|                   ; 58 (58)             ; 70 (70)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14                                                                                           ; i2c_ctrl            ; work         ;
+;       |i2c_master:inst|                   ; 100 (100)           ; 55 (55)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_master:inst                                                                                           ; i2c_master          ; work         ;
+;    |IO_DECODER:inst3|                     ; 26 (26)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|IO_DECODER:inst3                                                                                                               ; IO_DECODER          ; work         ;
+;    |Music_Gen:inst15|                     ; 99 (99)             ; 49 (49)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|Music_Gen:inst15                                                                                                               ; Music_Gen           ; work         ;
+;    |PLL_main:inst1|                       ; 0 (0)               ; 1 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|PLL_main:inst1                                                                                                                 ; PLL_main            ; work         ;
+;       |altpll:altpll_component|           ; 0 (0)               ; 1 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|PLL_main:inst1|altpll:altpll_component                                                                                         ; altpll              ; work         ;
+;          |PLL_main_altpll:auto_generated| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|PLL_main:inst1|altpll:altpll_component|PLL_main_altpll:auto_generated                                                          ; PLL_main_altpll     ; work         ;
+;    |SCOMP:inst|                           ; 477 (394)           ; 178 (178)                 ; 32768       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst                                                                                                                     ; SCOMP               ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 32768       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component                                                                                     ; altsyncram          ; work         ;
+;          |altsyncram_scr3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 32768       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component|altsyncram_scr3:auto_generated                                                      ; altsyncram_scr3     ; work         ;
+;       |lpm_clshift:shifter|               ; 83 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter                                                                                                 ; lpm_clshift         ; work         ;
+;          |lpm_clshift_fuc:auto_generated| ; 83 (83)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter|lpm_clshift_fuc:auto_generated                                                                  ; lpm_clshift_fuc     ; work         ;
+;    |SQ_GEN:inst11|                        ; 11 (11)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SQ_GEN:inst11                                                                                                                  ; SQ_GEN              ; work         ;
+;    |TIMER:inst4|                          ; 18 (18)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|TIMER:inst4                                                                                                                    ; TIMER               ; work         ;
+;    |clk_div:inst5|                        ; 49 (49)             ; 40 (40)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|clk_div:inst5                                                                                                                  ; clk_div             ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                           ;
-+--------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+----------------------------+
-; Name                                                                                 ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                        ;
-+--------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+----------------------------+
-; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_m7t3:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 2048         ; 16           ; --           ; --           ; 32768 ; InstructionDisplayTest.mif ;
-+--------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+----------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                          ;
++--------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+-----------+
+; Name                                                                                 ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF       ;
++--------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+-----------+
+; SCOMP:inst|altsyncram:altsyncram_component|altsyncram_scr3:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 2048         ; 16           ; --           ; --           ; 32768 ; SqGen.mif ;
++--------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+-----------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
@@ -315,6 +331,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance              ; IP Include File ;
 +--------+--------------+---------+--------------+--------------+------------------------------+-----------------+
 ; Altera ; ALTPLL       ; 19.1    ; N/A          ; N/A          ; |SCOMP_System|PLL_main:inst1 ; PLL_main.vhd    ;
+; Altera ; LPM_DIVIDE   ; 19.1    ; N/A          ; N/A          ; |SCOMP_System|Divider:inst17 ; Divider.vhd     ;
 +--------+--------------+---------+--------------+--------------+------------------------------+-----------------+
 
 
@@ -408,10 +425,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 425   ;
+; Total registers                              ; 474   ;
 ; Number of registers using Synchronous Clear  ; 34    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 155   ;
+; Number of registers using Asynchronous Clear ; 179   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 217   ;
 ; Number of registers using Preset             ; 0     ;
@@ -436,21 +453,21 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
-; 3:1                ; 99 bits   ; 198 LEs       ; 99 LEs               ; 99 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|PC_stack[4][4]                         ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_master:inst|data_tx[2]   ;
+; 3:1                ; 99 bits   ; 198 LEs       ; 99 LEs               ; 99 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|PC_stack[6][0]                         ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_master:inst|addr_rw[0]   ;
 ; 7:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14|tx_byte[2]   ;
-; 11:1               ; 11 bits   ; 77 LEs        ; 22 LEs               ; 55 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|PC[4]                                  ;
+; 11:1               ; 11 bits   ; 77 LEs        ; 22 LEs               ; 55 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|PC[1]                                  ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_master:inst|bit_cnt[0]   ;
 ; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[11] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[5]  ;
-; 12:1               ; 16 bits   ; 128 LEs       ; 96 LEs               ; 32 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|AC[15]                                 ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[7]  ;
+; 12:1               ; 16 bits   ; 128 LEs       ; 96 LEs               ; 32 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|AC[1]                                  ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_master:inst|count        ;
 ; 12:1               ; 16 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; No         ; |SCOMP_System|SCOMP:inst|Add1                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------+
-; Source assignments for SCOMP:inst|altsyncram:altsyncram_component|altsyncram_m7t3:auto_generated ;
+; Source assignments for SCOMP:inst|altsyncram:altsyncram_component|altsyncram_scr3:auto_generated ;
 +---------------------------------+--------------------+------+------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                 ;
 +---------------------------------+--------------------+------+------------------------------------+
@@ -845,62 +862,62 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +-----------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: SCOMP:inst|altsyncram:altsyncram_component ;
-+------------------------------------+----------------------------+-----------------------+
-; Parameter Name                     ; Value                      ; Type                  ;
-+------------------------------------+----------------------------+-----------------------+
-; BYTE_SIZE_BLOCK                    ; 8                          ; Untyped               ;
-; AUTO_CARRY_CHAINS                  ; ON                         ; AUTO_CARRY            ;
-; IGNORE_CARRY_BUFFERS               ; OFF                        ; IGNORE_CARRY          ;
-; AUTO_CASCADE_CHAINS                ; ON                         ; AUTO_CASCADE          ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                        ; IGNORE_CASCADE        ;
-; WIDTH_BYTEENA                      ; 1                          ; Untyped               ;
-; OPERATION_MODE                     ; SINGLE_PORT                ; Untyped               ;
-; WIDTH_A                            ; 16                         ; Signed Integer        ;
-; WIDTHAD_A                          ; 11                         ; Signed Integer        ;
-; NUMWORDS_A                         ; 2048                       ; Signed Integer        ;
-; OUTDATA_REG_A                      ; UNREGISTERED               ; Untyped               ;
-; ADDRESS_ACLR_A                     ; NONE                       ; Untyped               ;
-; OUTDATA_ACLR_A                     ; NONE                       ; Untyped               ;
-; WRCONTROL_ACLR_A                   ; NONE                       ; Untyped               ;
-; INDATA_ACLR_A                      ; NONE                       ; Untyped               ;
-; BYTEENA_ACLR_A                     ; NONE                       ; Untyped               ;
-; WIDTH_B                            ; 1                          ; Signed Integer        ;
-; WIDTHAD_B                          ; 1                          ; Signed Integer        ;
-; NUMWORDS_B                         ; 0                          ; Signed Integer        ;
-; INDATA_REG_B                       ; CLOCK1                     ; Untyped               ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                     ; Untyped               ;
-; RDCONTROL_REG_B                    ; CLOCK1                     ; Untyped               ;
-; ADDRESS_REG_B                      ; CLOCK1                     ; Untyped               ;
-; OUTDATA_REG_B                      ; UNREGISTERED               ; Untyped               ;
-; BYTEENA_REG_B                      ; CLOCK1                     ; Untyped               ;
-; INDATA_ACLR_B                      ; NONE                       ; Untyped               ;
-; WRCONTROL_ACLR_B                   ; NONE                       ; Untyped               ;
-; ADDRESS_ACLR_B                     ; NONE                       ; Untyped               ;
-; OUTDATA_ACLR_B                     ; NONE                       ; Untyped               ;
-; RDCONTROL_ACLR_B                   ; NONE                       ; Untyped               ;
-; BYTEENA_ACLR_B                     ; NONE                       ; Untyped               ;
-; WIDTH_BYTEENA_A                    ; 1                          ; Signed Integer        ;
-; WIDTH_BYTEENA_B                    ; 1                          ; Signed Integer        ;
-; RAM_BLOCK_TYPE                     ; AUTO                       ; Untyped               ;
-; BYTE_SIZE                          ; 8                          ; Signed Integer        ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                  ; Untyped               ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ       ; Untyped               ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ       ; Untyped               ;
-; INIT_FILE                          ; InstructionDisplayTest.mif ; Untyped               ;
-; INIT_FILE_LAYOUT                   ; PORT_A                     ; Untyped               ;
-; MAXIMUM_DEPTH                      ; 0                          ; Signed Integer        ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS                     ; Untyped               ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL                     ; Untyped               ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                     ; Untyped               ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                     ; Untyped               ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN            ; Untyped               ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN            ; Untyped               ;
-; ENABLE_ECC                         ; FALSE                      ; Untyped               ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                      ; Untyped               ;
-; WIDTH_ECCSTATUS                    ; 3                          ; Signed Integer        ;
-; DEVICE_FAMILY                      ; MAX 10                     ; Untyped               ;
-; CBXI_PARAMETER                     ; altsyncram_m7t3            ; Untyped               ;
-+------------------------------------+----------------------------+-----------------------+
++------------------------------------+----------------------+-----------------------------+
+; Parameter Name                     ; Value                ; Type                        ;
++------------------------------------+----------------------+-----------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                     ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE              ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                     ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                     ;
+; WIDTH_A                            ; 16                   ; Signed Integer              ;
+; WIDTHAD_A                          ; 11                   ; Signed Integer              ;
+; NUMWORDS_A                         ; 2048                 ; Signed Integer              ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                     ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                     ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                     ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                     ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                     ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                     ;
+; WIDTH_B                            ; 1                    ; Signed Integer              ;
+; WIDTHAD_B                          ; 1                    ; Signed Integer              ;
+; NUMWORDS_B                         ; 0                    ; Signed Integer              ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                     ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                     ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                     ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                     ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                     ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                     ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                     ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                     ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                     ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                     ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                     ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                     ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer              ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Signed Integer              ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                     ;
+; BYTE_SIZE                          ; 8                    ; Signed Integer              ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                     ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                     ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                     ;
+; INIT_FILE                          ; SqGen.mif            ; Untyped                     ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                     ;
+; MAXIMUM_DEPTH                      ; 0                    ; Signed Integer              ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                     ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                     ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                     ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                     ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                     ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                     ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                     ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                     ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer              ;
+; DEVICE_FAMILY                      ; MAX 10               ; Untyped                     ;
+; CBXI_PARAMETER                     ; altsyncram_scr3      ; Untyped                     ;
++------------------------------------+----------------------+-----------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -948,6 +965,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Divider:inst17|lpm_divide:LPM_DIVIDE_component ;
++------------------------+----------------+---------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                              ;
++------------------------+----------------+---------------------------------------------------+
+; LPM_WIDTHN             ; 24             ; Signed Integer                                    ;
+; LPM_WIDTHD             ; 12             ; Signed Integer                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                           ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                           ;
+; LPM_PIPELINE           ; 0              ; Untyped                                           ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                           ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                           ;
+; CBXI_PARAMETER         ; lpm_divide_ldp ; Untyped                                           ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                           ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                           ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                      ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                    ;
++------------------------+----------------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------+
 ; altpll Parameter Settings by Entity Instance                           ;
 +-------------------------------+----------------------------------------+
@@ -990,29 +1030,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 75                          ;
-; cycloneiii_ff         ; 425                         ;
-;     CLR               ; 144                         ;
+; boundary_port         ; 76                          ;
+; cycloneiii_ff         ; 474                         ;
+;     CLR               ; 168                         ;
 ;     ENA               ; 206                         ;
 ;     ENA CLR           ; 11                          ;
 ;     SCLR              ; 34                          ;
-;     plain             ; 30                          ;
+;     plain             ; 55                          ;
 ; cycloneiii_io_obuf    ; 2                           ;
-; cycloneiii_lcell_comb ; 938                         ;
-;     arith             ; 71                          ;
-;         2 data inputs ; 55                          ;
-;         3 data inputs ; 16                          ;
-;     normal            ; 867                         ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 15                          ;
-;         2 data inputs ; 30                          ;
-;         3 data inputs ; 309                         ;
-;         4 data inputs ; 512                         ;
+; cycloneiii_lcell_comb ; 1465                        ;
+;     arith             ; 338                         ;
+;         2 data inputs ; 106                         ;
+;         3 data inputs ; 232                         ;
+;     normal            ; 1127                        ;
+;         0 data inputs ; 22                          ;
+;         1 data inputs ; 28                          ;
+;         2 data inputs ; 84                          ;
+;         3 data inputs ; 414                         ;
+;         4 data inputs ; 579                         ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 16                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 9.00                        ;
-; Average LUT depth     ; 3.69                        ;
+; Max LUT depth         ; 70.60                       ;
+; Average LUT depth     ; 26.17                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1021,7 +1061,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -1031,7 +1071,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Tue Nov 03 22:59:47 2020
+    Info: Processing started: Sun Nov 15 23:57:09 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SCOMP -c SCOMP
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file i2c_interface.bdf
@@ -1058,7 +1098,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file timer.v
     Info (12022): Found design unit 1: TIMER-a File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/TIMER.vhd Line: 27
     Info (12023): Found entity 1: TIMER File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/TIMER.vhd Line: 17
 Info (12021): Found 2 design units, including 1 entities, in source file io_decoder.vhd
-    Info (12022): Found design unit 1: IO_DECODER-a File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/IO_DECODER.vhd Line: 33
+    Info (12022): Found design unit 1: IO_DECODER-a File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/IO_DECODER.vhd Line: 34
     Info (12023): Found entity 1: IO_DECODER File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/IO_DECODER.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file scomp.vhd
     Info (12022): Found design unit 1: SCOMP-a File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/SCOMP.vhd Line: 33
@@ -1072,6 +1112,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file hex_dis
     Info (12023): Found entity 1: HEX_DISP_6
 Info (12021): Found 1 design units, including 1 entities, in source file dps.bdf
     Info (12023): Found entity 1: Dps
+Info (12021): Found 2 design units, including 1 entities, in source file musicgen.vhd
+    Info (12022): Found design unit 1: Music_Gen-a File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/MusicGen.vhd Line: 28
+    Info (12023): Found entity 1: Music_Gen File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/MusicGen.vhd Line: 14
+Info (12021): Found 2 design units, including 1 entities, in source file divider.vhd
+    Info (12022): Found design unit 1: divider-SYN File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/Divider.vhd Line: 54
+    Info (12023): Found entity 1: Divider File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/Divider.vhd Line: 43
 Info (12127): Elaborating entity "SCOMP_System" for the top level hierarchy
 Info (12128): Elaborating entity "I2C_INTERFACE" for hierarchy "I2C_INTERFACE:inst13"
 Info (12128): Elaborating entity "i2c_master" for hierarchy "I2C_INTERFACE:inst13|i2c_master:inst"
@@ -1163,7 +1209,7 @@ Info (12133): Instantiated megafunction "SCOMP:inst|altsyncram:altsyncram_compon
     Info (12134): Parameter "indata_aclr_a" = "UNUSED"
     Info (12134): Parameter "indata_aclr_b" = "NONE"
     Info (12134): Parameter "indata_reg_b" = "CLOCK1"
-    Info (12134): Parameter "init_file" = "InstructionDisplayTest.mif"
+    Info (12134): Parameter "init_file" = "SqGen.mif"
     Info (12134): Parameter "init_file_layout" = "PORT_A"
     Info (12134): Parameter "maximum_depth" = "0"
     Info (12134): Parameter "numwords_a" = "2048"
@@ -1193,20 +1239,9 @@ Info (12133): Instantiated megafunction "SCOMP:inst|altsyncram:altsyncram_compon
     Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_m7t3.tdf
-    Info (12023): Found entity 1: altsyncram_m7t3 File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/altsyncram_m7t3.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_m7t3" for hierarchy "SCOMP:inst|altsyncram:altsyncram_component|altsyncram_m7t3:auto_generated" File: c:/users/broughton/desktop/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Warning (113031): 55 out of 2048 addresses are reinitialized. The latest initialized data will replace the existing data. There are 55 warnings found, and 10 warnings are reported. File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/InstructionDisplayTest.mif Line: 1
-    Warning (113030): Memory Initialization File address 0 is reinitialized File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/ Line: 13
-    Warning (113030): Memory Initialization File address 1 is reinitialized File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/ Line: 14
-    Warning (113030): Memory Initialization File address 2 is reinitialized File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/ Line: 15
-    Warning (113030): Memory Initialization File address 3 is reinitialized File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/ Line: 16
-    Warning (113030): Memory Initialization File address 4 is reinitialized File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/ Line: 17
-    Warning (113030): Memory Initialization File address 5 is reinitialized File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/ Line: 18
-    Warning (113030): Memory Initialization File address 6 is reinitialized File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/ Line: 19
-    Warning (113030): Memory Initialization File address 7 is reinitialized File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/ Line: 20
-    Warning (113030): Memory Initialization File address 8 is reinitialized File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/ Line: 21
-    Warning (113030): Memory Initialization File address 9 is reinitialized File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/ Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_scr3.tdf
+    Info (12023): Found entity 1: altsyncram_scr3 File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/altsyncram_scr3.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_scr3" for hierarchy "SCOMP:inst|altsyncram:altsyncram_component|altsyncram_scr3:auto_generated" File: c:/users/broughton/desktop/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12128): Elaborating entity "LPM_CLSHIFT" for hierarchy "SCOMP:inst|LPM_CLSHIFT:shifter" File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/SCOMP.vhd Line: 88
 Info (12130): Elaborated megafunction instantiation "SCOMP:inst|LPM_CLSHIFT:shifter" File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/SCOMP.vhd Line: 88
 Info (12133): Instantiated megafunction "SCOMP:inst|LPM_CLSHIFT:shifter" with the following parameter: File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/SCOMP.vhd Line: 88
@@ -1232,6 +1267,33 @@ Warning (12125): Using design file sq_gen.vhd, which is not specified as a desig
     Info (12022): Found design unit 1: SQ_GEN-a File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/sq_gen.vhd Line: 26
     Info (12023): Found entity 1: SQ_GEN File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/sq_gen.vhd Line: 16
 Info (12128): Elaborating entity "SQ_GEN" for hierarchy "SQ_GEN:inst11"
+Info (12128): Elaborating entity "Music_Gen" for hierarchy "Music_Gen:inst15"
+Warning (10492): VHDL Process Statement warning at MusicGen.vhd(44): signal "IO_DATA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/MusicGen.vhd Line: 44
+Info (12128): Elaborating entity "Divider" for hierarchy "Divider:inst17"
+Info (12128): Elaborating entity "lpm_divide" for hierarchy "Divider:inst17|lpm_divide:LPM_DIVIDE_component" File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/Divider.vhd Line: 82
+Info (12130): Elaborated megafunction instantiation "Divider:inst17|lpm_divide:LPM_DIVIDE_component" File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/Divider.vhd Line: 82
+Info (12133): Instantiated megafunction "Divider:inst17|lpm_divide:LPM_DIVIDE_component" with the following parameter: File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/Divider.vhd Line: 82
+    Info (12134): Parameter "lpm_drepresentation" = "UNSIGNED"
+    Info (12134): Parameter "lpm_hint" = "LPM_REMAINDERPOSITIVE=TRUE"
+    Info (12134): Parameter "lpm_nrepresentation" = "UNSIGNED"
+    Info (12134): Parameter "lpm_type" = "LPM_DIVIDE"
+    Info (12134): Parameter "lpm_widthd" = "12"
+    Info (12134): Parameter "lpm_widthn" = "24"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ldp.tdf
+    Info (12023): Found entity 1: lpm_divide_ldp File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/lpm_divide_ldp.tdf Line: 25
+Info (12128): Elaborating entity "lpm_divide_ldp" for hierarchy "Divider:inst17|lpm_divide:LPM_DIVIDE_component|lpm_divide_ldp:auto_generated" File: c:/users/broughton/desktop/quartus/libraries/megafunctions/lpm_divide.tdf Line: 148
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_8nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_8nh File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/sign_div_unsign_8nh.tdf Line: 25
+Info (12128): Elaborating entity "sign_div_unsign_8nh" for hierarchy "Divider:inst17|lpm_divide:LPM_DIVIDE_component|lpm_divide_ldp:auto_generated|sign_div_unsign_8nh:divider" File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/lpm_divide_ldp.tdf Line: 33
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_qke.tdf
+    Info (12023): Found entity 1: alt_u_div_qke File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/alt_u_div_qke.tdf Line: 27
+Info (12128): Elaborating entity "alt_u_div_qke" for hierarchy "Divider:inst17|lpm_divide:LPM_DIVIDE_component|lpm_divide_ldp:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_qke:divider" File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/sign_div_unsign_8nh.tdf Line: 33
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_t3c.tdf
+    Info (12023): Found entity 1: add_sub_t3c File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/add_sub_t3c.tdf Line: 23
+Info (12128): Elaborating entity "add_sub_t3c" for hierarchy "Divider:inst17|lpm_divide:LPM_DIVIDE_component|lpm_divide_ldp:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_qke:divider|add_sub_t3c:add_sub_0" File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/alt_u_div_qke.tdf Line: 35
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_u3c.tdf
+    Info (12023): Found entity 1: add_sub_u3c File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/add_sub_u3c.tdf Line: 23
+Info (12128): Elaborating entity "add_sub_u3c" for hierarchy "Divider:inst17|lpm_divide:LPM_DIVIDE_component|lpm_divide_ldp:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_qke:divider|add_sub_u3c:add_sub_1" File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/alt_u_div_qke.tdf Line: 36
 Info (12128): Elaborating entity "Dps" for hierarchy "Dps:inst10"
 Info (12128): Elaborating entity "HEX_DISP_6" for hierarchy "HEX_DISP_6:inst9"
 Warning (275009): Pin "hex_val1" not connected
@@ -1248,10 +1310,10 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[8]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[8]" into an OR gate
     Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[7]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[7]" into an OR gate
     Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[6]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[6]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[11]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[11]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[10]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[10]" into an OR gate
     Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[13]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[13]" into an OR gate
     Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[12]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[12]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[10]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[10]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[11]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[11]" into an OR gate
     Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[14]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[14]" into an OR gate
     Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[15]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[15]" into an OR gate
 Info (13000): Registers with preset signals will power-up high File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/i2c_master.vhd Line: 57
@@ -1263,17 +1325,17 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1176 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1707 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
-    Info (21059): Implemented 61 output pins
+    Info (21059): Implemented 62 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 1084 logic cells
+    Info (21061): Implemented 1614 logic cells
     Info (21064): Implemented 16 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 34 warnings
-    Info: Peak virtual memory: 4839 megabytes
-    Info: Processing ended: Tue Nov 03 23:00:05 2020
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:32
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
+    Info: Peak virtual memory: 4827 megabytes
+    Info: Processing ended: Sun Nov 15 23:57:22 2020
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:25
 
 

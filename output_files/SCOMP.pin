@@ -118,8 +118,8 @@ GND                          : AB1       : gnd    :                   :         
 RESERVED_INPUT               : AB2       :        :                   :         : 3         :                
 RESERVED_INPUT               : AB3       :        :                   :         : 3         :                
 RESERVED_INPUT               : AB4       :        :                   :         : 3         :                
-RESERVED_INPUT               : AB5       :        :                   :         : 3         :                
-RESERVED_INPUT               : AB6       :        :                   :         : 3         :                
+Arduino_IO[0]                : AB5       : output : 3.3-V LVTTL       :         : 3         : Y              
+Arduino_IO[1]                : AB6       : output : 3.3-V LVTTL       :         : 3         : Y              
 RESERVED_INPUT               : AB7       :        :                   :         : 3         :                
 RESERVED_INPUT               : AB8       :        :                   :         : 3         :                
 RESERVED_INPUT               : AB9       :        :                   :         : 3         :                
@@ -332,7 +332,7 @@ VCCIO6                       : K17       : power  :                   : 3.3V    
 RESERVED_INPUT               : K18       :        :                   :         : 6         :                
 RESERVED_INPUT               : K19       :        :                   :         : 6         :                
 HEX5[1]                      : K20       : output : 3.3-V LVTTL       :         : 6         : Y              
-Arduino_IO[0]                : K21       : output : 3.3-V LVTTL       :         : 6         : N              
+RESERVED_INPUT               : K21       :        :                   :         : 6         :                
 RESERVED_INPUT               : K22       :        :                   :         : 6         :                
 RESERVED_INPUT               : L1        :        :                   :         : 1B        :                
 RESERVED_INPUT               : L2        :        :                   :         : 1B        :                
