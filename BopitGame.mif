@@ -1,0 +1,842 @@
+-- Altera Memory Initialization File (MIF)
+
+DEPTH = 2048;
+WIDTH = 16;
+
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+
+CONTENT
+  BEGIN
+    [000..7FF] : 0000;  -- Default to NOP
+
+           000 : 81CC;  -- CALL  SetupI2C
+           001 : 807D;  -- 	Call Flip5
+           002 : 81B2;  -- 	Call Tilt
+           003 : 8039;  -- 	Call Flip1
+           004 : 8012;  -- 	Call Button
+           005 : 80C1;  -- 	Call Flip9
+           006 : 8028;  -- 	Call Flip0
+           007 : 81B2;  -- 	call Tilt
+           008 : 808E;  -- 	Call Flip6
+           009 : 80B0;  -- 	Call Flip8
+           00A : 8012;  -- 	Call Button
+           00B : 805B;  -- 	Call Flip3
+           00C : 804A;  -- 	Call Flip2
+           00D : 8012;  -- 	Call Button
+           00E : 806C;  -- 	Call Flip4
+           00F : 81B2;  -- 	call Tilt
+           010 : 809F;  -- 	Call Flip7
+           011 : 2801;  -- 	Jump Start
+           012 : 0B24;  -- 	LOAD DisplayP
+           013 : 9809;  -- 	OUT   hex5
+           014 : 0B25;  -- 	LOAD DisplayU
+           015 : 9808;  -- 	OUT   hex4
+           016 : 0B26;  -- 	LOAD DisplayS
+           017 : 9807;  -- 	OUT	  hex3
+           018 : 0B27;  -- 	LOAD DisplayH
+           019 : 9806;  -- 	OUT   hex2
+           01A : 0B2C;  -- 	LOAD DisplayBlank
+           01B : 9805;  -- 	OUT	  hex1
+           01C : B801;  -- 	LOADI 1
+           01D : 9804;  -- 	OUT   hex0
+           01E : 9021;  -- 	IN Button1
+           01F : 532D;  -- 	OR Zero			;Button is active low
+           020 : 3812;  -- 	JPOS Button
+           021 : BA0B;  -- 	LOADI 523
+           022 : 6002;  -- 	shift 2
+           023 : 9820;  -- 	OUT MusicGen
+           024 : 8311;  -- 	CALL Wait3
+           025 : B800;  -- 	LOADI 0
+           026 : 9820;  -- 	OUT MusicGen
+           027 : 8800;  -- 	Return
+           028 : 0B2B;  -- 	LOAD DisplayF
+           029 : 9809;  -- 	OUT   hex5
+           02A : 0B2A;  -- 	LOAD DisplayL
+           02B : 9808;  -- 	OUT   hex4
+           02C : 0B29;  -- 	LOAD DisplayI
+           02D : 9807;  -- 	OUT	  hex3
+           02E : 0B24;  -- 	LOAD DisplayP
+           02F : 9806;  -- 	OUT   hex2
+           030 : 0B2C;  -- 	LOAD DisplayBlank
+           031 : 9805;  -- 	OUT	  hex1
+           032 : B800;  -- 	LOADI 0
+           033 : 9804;  -- 	OUT   hex0
+           034 : 9000;  -- 	IN Switches
+           035 : 4B30;  -- 	AND Bit0
+           036 : 4028;  -- 	JZERO Flip0
+           037 : 80D2;  -- 	CALL Sound0 ;Jump to sound1 if correct switch flipped
+           038 : 8800;  -- 	Return
+           039 : 0B2B;  -- 	LOAD DisplayF
+           03A : 9809;  -- 	OUT   hex5
+           03B : 0B2A;  -- 	LOAD DisplayL
+           03C : 9808;  -- 	OUT   hex4
+           03D : 0B29;  -- 	LOAD DisplayI
+           03E : 9807;  -- 	OUT	  hex3
+           03F : 0B24;  -- 	LOAD DisplayP
+           040 : 9806;  -- 	OUT   hex2
+           041 : 0B2C;  -- 	LOAD DisplayBlank
+           042 : 9805;  -- 	OUT	  hex1
+           043 : B801;  -- 	LOADI 1
+           044 : 9804;  -- 	OUT   hex0
+           045 : 9000;  -- 	IN Switches
+           046 : 4B31;  -- 	AND Bit1
+           047 : 4039;  -- 	JZERO Flip1
+           048 : 80E7;  -- 	CALL Sound1 ;Jump to sound1 if correct switch flipped
+           049 : 8800;  -- 	RETURN
+           04A : 0B2B;  -- 	LOAD DisplayF
+           04B : 9809;  -- 	OUT   hex5
+           04C : 0B2A;  -- 	LOAD DisplayL
+           04D : 9808;  -- 	OUT   hex4
+           04E : 0B29;  -- 	LOAD DisplayI
+           04F : 9807;  -- 	OUT	  hex3
+           050 : 0B24;  -- 	LOAD DisplayP
+           051 : 9806;  -- 	OUT   hex2
+           052 : 0B2C;  -- 	LOAD DisplayBlank
+           053 : 9805;  -- 	OUT	  hex1
+           054 : B802;  -- 	LOADI 2
+           055 : 9804;  -- 	OUT   hex0
+           056 : 9000;  -- 	IN Switches
+           057 : 4B32;  -- 	AND Bit2
+           058 : 404A;  -- 	JZERO Flip2
+           059 : 80FC;  -- 	CALL Sound2 ;Jump to sound1 if correct switch flipped
+           05A : 8800;  -- 	RETURN
+           05B : 0B2B;  -- 	LOAD DisplayF
+           05C : 9809;  -- 	OUT   hex5
+           05D : 0B2A;  -- 	LOAD DisplayL
+           05E : 9808;  -- 	OUT   hex4
+           05F : 0B29;  -- 	LOAD DisplayI
+           060 : 9807;  -- 	OUT	  hex3
+           061 : 0B24;  -- 	LOAD DisplayP
+           062 : 9806;  -- 	OUT   hex2
+           063 : 0B2C;  -- 	LOAD DisplayBlank
+           064 : 9805;  -- 	OUT	  hex1
+           065 : B803;  -- 	LOADI 3
+           066 : 9804;  -- 	OUT   hex0
+           067 : 9000;  -- 	IN Switches
+           068 : 4B33;  -- 	AND Bit3
+           069 : 405B;  -- 	JZERO Flip3
+           06A : 8111;  -- 	CALL Sound3 ;Jump to sound1 if correct switch flipped
+           06B : 8800;  -- 	RETURN
+           06C : 0B2B;  -- 	LOAD DisplayF
+           06D : 9809;  -- 	OUT   hex5
+           06E : 0B2A;  -- 	LOAD DisplayL
+           06F : 9808;  -- 	OUT   hex4
+           070 : 0B29;  -- 	LOAD DisplayI
+           071 : 9807;  -- 	OUT	  hex3
+           072 : 0B24;  -- 	LOAD DisplayP
+           073 : 9806;  -- 	OUT   hex2
+           074 : 0B2C;  -- 	LOAD DisplayBlank
+           075 : 9805;  -- 	OUT	  hex1
+           076 : B804;  -- 	LOADI 4
+           077 : 9804;  -- 	OUT   hex0
+           078 : 9000;  -- 	IN Switches
+           079 : 4B34;  -- 	AND Bit4
+           07A : 406C;  -- 	JZERO Flip4
+           07B : 8126;  -- 	CALL Sound4 ;Jump to sound1 if correct switch flipped
+           07C : 8800;  -- 	RETURN
+           07D : 0B2B;  -- 	LOAD DisplayF
+           07E : 9809;  -- 	OUT   hex5
+           07F : 0B2A;  -- 	LOAD DisplayL
+           080 : 9808;  -- 	OUT   hex4
+           081 : 0B29;  -- 	LOAD DisplayI
+           082 : 9807;  -- 	OUT	  hex3
+           083 : 0B24;  -- 	LOAD DisplayP
+           084 : 9806;  -- 	OUT   hex2
+           085 : 0B2C;  -- 	LOAD DisplayBlank
+           086 : 9805;  -- 	OUT	  hex1
+           087 : B805;  -- 	LOADI 5
+           088 : 9804;  -- 	OUT   hex0
+           089 : 9000;  -- 	IN Switches
+           08A : 4B35;  -- 	AND Bit5
+           08B : 407D;  -- 	JZERO Flip5
+           08C : 813B;  -- 	CALL Sound5 ;Jump to sound1 if correct switch flipped
+           08D : 8800;  -- 	RETURN
+           08E : 0B2B;  -- 	LOAD DisplayF
+           08F : 9809;  -- 	OUT   hex5
+           090 : 0B2A;  -- 	LOAD DisplayL
+           091 : 9808;  -- 	OUT   hex4
+           092 : 0B29;  -- 	LOAD DisplayI
+           093 : 9807;  -- 	OUT	  hex3
+           094 : 0B24;  -- 	LOAD DisplayP
+           095 : 9806;  -- 	OUT   hex2
+           096 : 0B2C;  -- 	LOAD DisplayBlank
+           097 : 9805;  -- 	OUT	  hex1
+           098 : B806;  -- 	LOADI 6
+           099 : 9804;  -- 	OUT   hex0
+           09A : 9000;  -- 	IN Switches
+           09B : 4B36;  -- 	AND Bit6
+           09C : 408E;  -- 	JZERO Flip6
+           09D : 8150;  -- 	CALL Sound6 ;Jump to sound1 if correct switch flipped
+           09E : 8800;  -- 	RETURN
+           09F : 0B2B;  -- 	LOAD DisplayF
+           0A0 : 9809;  -- 	OUT   hex5
+           0A1 : 0B2A;  -- 	LOAD DisplayL
+           0A2 : 9808;  -- 	OUT   hex4
+           0A3 : 0B29;  -- 	LOAD DisplayI
+           0A4 : 9807;  -- 	OUT	  hex3
+           0A5 : 0B24;  -- 	LOAD DisplayP
+           0A6 : 9806;  -- 	OUT   hex2
+           0A7 : 0B2C;  -- 	LOAD DisplayBlank
+           0A8 : 9805;  -- 	OUT	  hex1
+           0A9 : B807;  -- 	LOADI 7
+           0AA : 9804;  -- 	OUT   hex0
+           0AB : 9000;  -- 	IN Switches
+           0AC : 4B37;  -- 	AND Bit7
+           0AD : 409F;  -- 	JZERO Flip7
+           0AE : 8165;  -- 	CALL Sound7 ;Jump to sound1 if correct switch flipped
+           0AF : 8800;  -- 	RETURN
+           0B0 : 0B2B;  -- 	LOAD DisplayF
+           0B1 : 9809;  -- 	OUT   hex5
+           0B2 : 0B2A;  -- 	LOAD DisplayL
+           0B3 : 9808;  -- 	OUT   hex4
+           0B4 : 0B29;  -- 	LOAD DisplayI
+           0B5 : 9807;  -- 	OUT	  hex3
+           0B6 : 0B24;  -- 	LOAD DisplayP
+           0B7 : 9806;  -- 	OUT   hex2
+           0B8 : 0B2C;  -- 	LOAD DisplayBlank
+           0B9 : 9805;  -- 	OUT	  hex1
+           0BA : B808;  -- 	LOADI 8
+           0BB : 9804;  -- 	OUT   hex0
+           0BC : 9000;  -- 	IN Switches
+           0BD : 4B38;  -- 	AND Bit8
+           0BE : 40B0;  -- 	JZERO Flip8
+           0BF : 817C;  -- 	CALL Sound8 ;Jump to sound1 if correct switch flipped
+           0C0 : 8800;  -- 	RETURN
+           0C1 : 0B2B;  -- 	LOAD DisplayF
+           0C2 : 9809;  -- 	OUT   hex5
+           0C3 : 0B2A;  -- 	LOAD DisplayL
+           0C4 : 9808;  -- 	OUT   hex4
+           0C5 : 0B29;  -- 	LOAD DisplayI
+           0C6 : 9807;  -- 	OUT	  hex3
+           0C7 : 0B24;  -- 	LOAD DisplayP
+           0C8 : 9806;  -- 	OUT   hex2
+           0C9 : 0B2C;  -- 	LOAD DisplayBlank
+           0CA : 9805;  -- 	OUT	  hex1
+           0CB : B809;  -- 	LOADI 9
+           0CC : 9804;  -- 	OUT   hex0
+           0CD : 9000;  -- 	IN Switches
+           0CE : 4B39;  -- 	AND Bit9
+           0CF : 40C1;  -- 	JZERO Flip9
+           0D0 : 8197;  -- 	CALL Sound9 ;Jump to sound1 if correct switch flipped
+           0D1 : 8800;  -- 	RETURN
+           0D2 : B841;  -- 	LOADI 65
+           0D3 : 9820;  -- 	OUT MusicGen
+           0D4 : 8307;  -- 	CALL Wait
+           0D5 : B845;  -- 	LOADI 69
+           0D6 : 9820;  -- 	OUT MusicGen
+           0D7 : 8307;  -- 	CALL Wait
+           0D8 : B849;  -- 	LOADI 73
+           0D9 : 9820;  -- 	OUT MusicGen
+           0DA : 8307;  -- 	CALL Wait
+           0DB : B84E;  -- 	LOADI 78
+           0DC : 9820;  -- 	OUT MusicGen
+           0DD : 8307;  -- 	CALL Wait
+           0DE : B852;  -- 	LOADI 82
+           0DF : 9820;  -- 	OUT MusicGen
+           0E0 : 8307;  -- 	CALL Wait
+           0E1 : B857;  -- 	LOADI 87
+           0E2 : 9820;  -- 	OUT MusicGen
+           0E3 : 8307;  -- 	CALL Wait
+           0E4 : B800;  -- 	LOADI 0
+           0E5 : 9820;  -- 	OUT MusicGen
+           0E6 : 8800;  -- 	RETURN
+           0E7 : B85D;  -- 	LOADI 93
+           0E8 : 9820;  -- 	OUT MusicGen
+           0E9 : 8307;  -- 	CALL Wait
+           0EA : B862;  -- 	LOADI 98
+           0EB : 9820;  -- 	OUT MusicGen
+           0EC : 8307;  -- 	CALL Wait
+           0ED : B868;  -- 	LOADI 104
+           0EE : 9820;  -- 	OUT MusicGen
+           0EF : 8307;  -- 	CALL Wait
+           0F0 : B86E;  -- 	LOADI 110
+           0F1 : 9820;  -- 	OUT MusicGen
+           0F2 : 8307;  -- 	CALL Wait
+           0F3 : B875;  -- 	LOADI 117
+           0F4 : 9820;  -- 	OUT MusicGen
+           0F5 : 8307;  -- 	CALL Wait
+           0F6 : B87B;  -- 	LOADI 123
+           0F7 : 9820;  -- 	OUT MusicGen
+           0F8 : 8307;  -- 	CALL Wait
+           0F9 : B800;  -- 	LOADI 0
+           0FA : 9820;  -- 	OUT MusicGen
+           0FB : 8800;  -- 	RETURN
+           0FC : B883;  -- 	LOADI 131
+           0FD : 9820;  -- 	OUT MusicGen
+           0FE : 8307;  -- 	CALL Wait
+           0FF : B88B;  -- 	LOADI 139
+           100 : 9820;  -- 	OUT MusicGen
+           101 : 8307;  -- 	CALL Wait
+           102 : B893;  -- 	LOADI 147
+           103 : 9820;  -- 	OUT MusicGen
+           104 : 8307;  -- 	CALL Wait
+           105 : B89C;  -- 	LOADI 156
+           106 : 9820;  -- 	OUT MusicGen
+           107 : 8307;  -- 	CALL Wait
+           108 : B8A5;  -- 	LOADI 165
+           109 : 9820;  -- 	OUT MusicGen
+           10A : 8307;  -- 	CALL Wait
+           10B : B8AF;  -- 	LOADI 175
+           10C : 9820;  -- 	OUT MusicGen
+           10D : 8307;  -- 	CALL Wait
+           10E : B800;  -- 	LOADI 0
+           10F : 9820;  -- 	OUT MusicGen
+           110 : 8800;  -- 	RETURN
+           111 : B8B9;  -- 	LOADI 185
+           112 : 9820;  -- 	OUT MusicGen
+           113 : 8307;  -- 	CALL Wait
+           114 : B8C4;  -- 	LOADI 196
+           115 : 9820;  -- 	OUT MusicGen
+           116 : 8307;  -- 	CALL Wait
+           117 : B8D0;  -- 	LOADI 208
+           118 : 9820;  -- 	OUT MusicGen
+           119 : 8307;  -- 	CALL Wait
+           11A : B8DC;  -- 	LOADI 220
+           11B : 9820;  -- 	OUT MusicGen
+           11C : 8307;  -- 	CALL Wait
+           11D : B8E9;  -- 	LOADI 233
+           11E : 9820;  -- 	OUT MusicGen
+           11F : 8307;  -- 	CALL Wait
+           120 : B8F7;  -- 	LOADI 247
+           121 : 9820;  -- 	OUT MusicGen
+           122 : 8307;  -- 	CALL Wait
+           123 : B800;  -- 	LOADI 0
+           124 : 9820;  -- 	OUT MusicGen
+           125 : 8800;  -- 	RETURN
+           126 : B906;  -- 	LOADI 262
+           127 : 9820;  -- 	OUT MusicGen
+           128 : 8307;  -- 	CALL Wait
+           129 : B915;  -- 	LOADI 277
+           12A : 9820;  -- 	OUT MusicGen
+           12B : 8307;  -- 	CALL Wait
+           12C : B926;  -- 	LOADI 294
+           12D : 9820;  -- 	OUT MusicGen
+           12E : 8307;  -- 	CALL Wait
+           12F : B937;  -- 	LOADI 311
+           130 : 9820;  -- 	OUT MusicGen
+           131 : 8307;  -- 	CALL Wait
+           132 : B94A;  -- 	LOADI 330
+           133 : 9820;  -- 	OUT MusicGen
+           134 : 8307;  -- 	CALL Wait
+           135 : B95E;  -- 	LOADI 350
+           136 : 9820;  -- 	OUT MusicGen
+           137 : 8307;  -- 	CALL Wait
+           138 : B800;  -- 	LOADI 0
+           139 : 9820;  -- 	OUT MusicGen
+           13A : 8800;  -- 	RETURN
+           13B : B972;  -- 	LOADI 370
+           13C : 9820;  -- 	OUT MusicGen
+           13D : 8307;  -- 	CALL Wait
+           13E : B988;  -- 	LOADI 392
+           13F : 9820;  -- 	OUT MusicGen
+           140 : 8307;  -- 	CALL Wait
+           141 : B99F;  -- 	LOADI 415
+           142 : 9820;  -- 	OUT MusicGen
+           143 : 8307;  -- 	CALL Wait
+           144 : B9B8;  -- 	LOADI 440
+           145 : 9820;  -- 	OUT MusicGen
+           146 : 8307;  -- 	CALL Wait
+           147 : B9D2;  -- 	LOADI 466
+           148 : 9820;  -- 	OUT MusicGen
+           149 : 8307;  -- 	CALL Wait
+           14A : B9EE;  -- 	LOADI 494
+           14B : 9820;  -- 	OUT MusicGen
+           14C : 8307;  -- 	CALL Wait
+           14D : B800;  -- 	LOADI 0
+           14E : 9820;  -- 	OUT MusicGen
+           14F : 8800;  -- 	RETURN
+           150 : BA0B;  -- 	LOADI 523
+           151 : 9820;  -- 	OUT MusicGen
+           152 : 8307;  -- 	CALL Wait
+           153 : BA2A;  -- 	LOADI 554
+           154 : 9820;  -- 	OUT MusicGen
+           155 : 8307;  -- 	CALL Wait
+           156 : BA4B;  -- 	LOADI 587
+           157 : 9820;  -- 	OUT MusicGen
+           158 : 8307;  -- 	CALL Wait
+           159 : BA6E;  -- 	LOADI 622
+           15A : 9820;  -- 	OUT MusicGen
+           15B : 8307;  -- 	CALL Wait
+           15C : BA94;  -- 	LOADI 660
+           15D : 9820;  -- 	OUT MusicGen
+           15E : 8307;  -- 	CALL Wait
+           15F : BABA;  -- 	LOADI 698
+           160 : 9820;  -- 	OUT MusicGen
+           161 : 8307;  -- 	CALL Wait
+           162 : B800;  -- 	LOADI 0
+           163 : 9820;  -- 	OUT MusicGen
+           164 : 8800;  -- 	RETURN
+           165 : BAE4;  -- 	LOADI 740
+           166 : 9820;  -- 	OUT MusicGen
+           167 : 8307;  -- 	CALL Wait
+           168 : BB10;  -- 	LOADI 784
+           169 : 9820;  -- 	OUT MusicGen
+           16A : 8307;  -- 	CALL Wait
+           16B : BB3F;  -- 	LOADI 831
+           16C : 9820;  -- 	OUT MusicGen
+           16D : 8307;  -- 	CALL Wait
+           16E : BB70;  -- 	LOADI 880
+           16F : 9820;  -- 	OUT MusicGen
+           170 : 8307;  -- 	CALL Wait
+           171 : B8E9;  -- 	LOADI 233
+           172 : 6002;  -- 	shift 2
+           173 : 9820;  -- 	OUT MusicGen
+           174 : 8307;  -- 	CALL Wait
+           175 : B8F7;  -- 	LOADI 247
+           176 : 6002;  -- 	shift 2
+           177 : 9820;  -- 	OUT MusicGen
+           178 : 8307;  -- 	CALL Wait
+           179 : B800;  -- 	LOADI 0
+           17A : 9820;  -- 	OUT MusicGen
+           17B : 8800;  -- 	RETURN
+           17C : B906;  -- 	LOADI 262
+           17D : 6002;  -- 	shift 2
+           17E : 9820;  -- 	OUT MusicGen
+           17F : 8307;  -- 	CALL Wait
+           180 : B915;  -- 	LOADI 277
+           181 : 6002;  -- 	shift 2
+           182 : 9820;  -- 	OUT MusicGen
+           183 : 8307;  -- 	CALL Wait
+           184 : B926;  -- 	LOADI 294
+           185 : 6002;  -- 	shift 2
+           186 : 9820;  -- 	OUT MusicGen
+           187 : 8307;  -- 	CALL Wait
+           188 : B937;  -- 	LOADI 311
+           189 : 6002;  -- 	shift 2
+           18A : 9820;  -- 	OUT MusicGen
+           18B : 8307;  -- 	CALL Wait
+           18C : B94A;  -- 	LOADI 330
+           18D : 6002;  -- 	shift 2
+           18E : 9820;  -- 	OUT MusicGen
+           18F : 8307;  -- 	CALL Wait
+           190 : B95C;  -- 	LOADI 348
+           191 : 6002;  -- 	shift 2
+           192 : 9820;  -- 	OUT MusicGen
+           193 : 8307;  -- 	CALL Wait
+           194 : B800;  -- 	LOADI 0
+           195 : 9820;  -- 	OUT MusicGen
+           196 : 8800;  -- 	RETURN
+           197 : B972;  -- 	LOADI 370
+           198 : 6002;  -- 	SHIFT 2
+           199 : 9820;  -- 	OUT MusicGen
+           19A : 8307;  -- 	CALL Wait
+           19B : B988;  -- 	LOADI 392
+           19C : 6002;  -- 	SHIFT 2
+           19D : 9820;  -- 	OUT MusicGen
+           19E : 8307;  -- 	CALL Wait
+           19F : B99F;  -- 	LOADI 415
+           1A0 : 6002;  -- 	SHIFT 2
+           1A1 : 9820;  -- 	OUT MusicGen
+           1A2 : 8307;  -- 	CALL Wait
+           1A3 : B9B8;  -- 	LOADI 440
+           1A4 : 6002;  -- 	SHIFT 2
+           1A5 : 9820;  -- 	OUT MusicGen
+           1A6 : 8307;  -- 	CALL Wait
+           1A7 : B9D2;  -- 	LOADI 466
+           1A8 : 6002;  -- 	SHIFT 2
+           1A9 : 9820;  -- 	OUT MusicGen
+           1AA : 8307;  -- 	CALL Wait
+           1AB : B9EE;  -- 	LOADI 494
+           1AC : 6002;  -- 	SHIFT 2
+           1AD : 9820;  -- 	OUT MusicGen
+           1AE : 8307;  -- 	CALL Wait
+           1AF : B800;  -- 	LOADI 0
+           1B0 : 9820;  -- 	OUT MusicGen
+           1B1 : 8800;  -- 	RETURN
+           1B2 : 0B28;  -- 	LOAD DisplayT
+           1B3 : 9809;  -- 	OUT Hex5
+           1B4 : 0B29;  -- 	LOAD DisplayI
+           1B5 : 9808;  -- 	OUT Hex4
+           1B6 : 0B2A;  -- 	LOAD DisplayL
+           1B7 : 9807;  -- 	OUT Hex3
+           1B8 : 0B28;  -- 	LOAD DisplayT
+           1B9 : 9806;  -- 	OUT Hex2
+           1BA : 0B2C;  -- 	LOAD DisplayBlank
+           1BB : 9805;  -- 	OUT Hex1
+           1BC : 0B2C;  -- 	LOAD DisplayBlank
+           1BD : 9804;  -- 	OUT Hex0
+           1BE : 81E2;  -- 	CALL   ReadX		; read the x acceleration value
+           1BF : 1302;  -- 	STORE  L2A			; store the value in L2A
+           1C0 : 81EC;  -- 	CALL   ReadY		; read the y acceleration value
+           1C1 : 1303;  -- 	STORE  L2B			; store the value in L2B
+           1C2 : 82D8;  -- 	CALL   L2Estimate	; calculate and return the L2Estimate value in AC
+           1C3 : 6001;  -- 	SHIFT  1			; divide the value by 16
+           1C4 : 9820;  -- 	OUT    MusicGen
+           1C5 : 830C;  -- 	CALL   Wait2
+           1C6 : 82D8;  -- 	CALL   L2Estimate
+           1C7 : 4B38;  -- 	AND	   Bit8
+           1C8 : 41B2;  -- 	JZERO  Tilt   		; If not tilted, call Tilt again
+           1C9 : B800;  -- 	LOADI  0
+           1CA : 9820;  -- 	OUT    MusicGen
+           1CB : 8800;  -- 	RETURN
+           1CC : 0B1A;  -- 	LOAD   AccCfg      ; load the number of commands
+           1CD : 11E1;  -- 	STORE  CmdCnt
+           1CE : BB1A;  -- 	LOADI  AccCfg      ; Load list address
+           1CF : 6801;  -- 	ADDI   1           ; Increment to first command
+           1D0 : 11E0;  -- 	STORE  CmdPtr
+           1D1 : 8200;  -- 	CALL   BlockI2C    ; wait for idle
+           1D2 : 0B16;  -- 	LOAD   I2CWCmd     ; load write command
+           1D3 : 9890;  -- 	OUT    I2C_CMD     ; to I2C_CMD register
+           1D4 : 71E0;  -- 	ILOAD  CmdPtr      ; load current command
+           1D5 : 9891;  -- 	OUT    I2C_DATA    ; to I2C_DATA register
+           1D6 : 9892;  -- 	OUT    I2C_RDY     ; start the communication
+           1D7 : 8200;  -- 	CALL   BlockI2C    ; wait for it to finish
+           1D8 : 09E0;  -- 	LOAD   CmdPtr
+           1D9 : 6801;  -- 	ADDI   1           ; Increment to next command
+           1DA : 11E0;  -- 	STORE  CmdPtr
+           1DB : 09E1;  -- 	LOAD   CmdCnt
+           1DC : 6FFF;  -- 	ADDI   -1          ; Check if finished
+           1DD : 11E1;  -- 	STORE  CmdCnt
+           1DE : 39D1;  -- 	JPOS   I2CCmdLoop
+           1DF : 8800;  -- 	RETURN
+           1E0 : 0000;  -- CmdPtr: DW 0
+           1E1 : 0000;  -- CmdCnt: DW 0
+           1E2 : 8200;  -- 	CALL   BlockI2C    ; ensure bus is idle
+           1E3 : 0B17;  -- 	LOAD   I2CRCmd     ; load read command
+           1E4 : 9890;  -- 	OUT    I2C_CMD     ; send read command to I2C_CMD register
+           1E5 : 0B18;  -- 	LOAD   AccXAddr    ; load ADXL345 register address for X acceleration 
+           1E6 : 9891;  -- 	OUT    I2C_DATA    ; send to I2C_DATA register
+           1E7 : 9892;  -- 	OUT    I2C_RDY     ; start the communication
+           1E8 : 8200;  -- 	CALL   BlockI2C    ; wait for it to finish
+           1E9 : 9091;  -- 	IN     I2C_data    ; put the data in AC
+           1EA : 81F6;  -- 	CALL   SwapBytes   ; bytes are returned in wrong order; swap them
+           1EB : 8800;  -- 	RETURN
+           1EC : 8200;  -- 	CALL   BlockI2C    ; ensure bus is idle
+           1ED : 0B17;  -- 	LOAD   I2CRCmd     ; load read command
+           1EE : 9890;  -- 	OUT    I2C_CMD     ; send read command to I2C_CMD register
+           1EF : 0B19;  -- 	LOAD   AccYAddr    ; load ADXL345 register address for X acceleration 
+           1F0 : 9891;  -- 	OUT    I2C_DATA    ; send to I2C_DATA register
+           1F1 : 9892;  -- 	OUT    I2C_RDY     ; start the communication
+           1F2 : 8200;  -- 	CALL   BlockI2C    ; wait for it to finish
+           1F3 : 9091;  -- 	IN     I2C_data    ; put the data in AC
+           1F4 : 81F6;  -- 	CALL   SwapBytes   ; bytes are returned in wrong order; swap them
+           1F5 : 8800;  -- 	RETURN
+           1F6 : 11FE;  -- 	STORE  SBT1
+           1F7 : 6008;  -- 	SHIFT  8
+           1F8 : 11FF;  -- 	STORE  SBT2
+           1F9 : 09FE;  -- 	LOAD   SBT1
+           1FA : 6018;  -- 	SHIFT  -8
+           1FB : 4B3A;  -- 	AND    LoByte
+           1FC : 51FF;  -- 	OR     SBT2
+           1FD : 8800;  -- 	RETURN
+           1FE : 0000;  -- SBT1: DW 0
+           1FF : 0000;  -- SBT2: DW 0
+           200 : 0B2D;  -- 	LOAD   Zero
+           201 : 1321;  -- 	STORE  Temp        ; Used to check for timeout
+           202 : 0B21;  -- 	LOAD   Temp
+           203 : 6801;  -- 	ADDI   1           ; this will result in ~0.1s timeout
+           204 : 1321;  -- 	STORE  Temp
+           205 : 4209;  -- 	JZERO  I2CError    ; Timeout occurred; error
+           206 : 9092;  -- 	IN     I2C_RDY     ; Read busy signal
+           207 : 3A02;  -- 	JPOS   BI2CL       ; If not 0, try again
+           208 : 8800;  -- 	RETURN             ; Else return
+           209 : 0B2D;  -- 	LOAD   Zero
+           20A : 692C;  -- 	ADDI   &H12C       ; "I2C"
+           20B : 9804;  -- 	OUT    Hex0        ; display error message
+           20C : 2A09;  -- 	JUMP   I2CError
+           20D : 3A10;  -- 	JPOS   Abs_r
+           20E : 5B2E;  -- 	XOR    NegOne       ; Flip all bits
+           20F : 6801;  -- 	ADDI   1            ; Add one (i.e. negate number)
+           210 : 8800;  -- 	RETURN
+           211 : 0A71;  -- 	LOAD   AtanY
+           212 : 820D;  -- 	CALL   Abs          ; abs(y)
+           213 : 1273;  -- 	STORE  AtanT
+           214 : 0A70;  -- 	LOAD   AtanX        ; abs(x)
+           215 : 820D;  -- 	CALL   Abs
+           216 : 2273;  -- 	SUB    AtanT        ; abs(x) - abs(y)
+           217 : 3222;  -- 	JNEG   A2_sw        ; if abs(y) > abs(x), switch arguments.
+           218 : 0A70;  -- 	LOAD   AtanX        ; Octants 1, 4, 5, 8
+           219 : 321F;  -- 	JNEG   A2_R3
+           21A : 8231;  -- 	CALL   A2_calc      ; Octants 1, 8
+           21B : 321D;  -- 	JNEG   A2_R1n
+           21C : 8800;  -- 	RETURN              ; Return raw value if in octant 1
+           21D : 6968;  -- 	ADDI   360          ; Add 360 if we are in octant 8
+           21E : 8800;  -- 	RETURN
+           21F : 8231;  -- 	CALL   A2_calc      ; Octants 4, 5            
+           220 : 68B4;  -- 	ADDI   180          ; theta' = theta + 180
+           221 : 8800;  -- 	RETURN
+           222 : 0A71;  -- 	LOAD   AtanY        ; Swap input arguments
+           223 : 1273;  -- 	STORE  AtanT
+           224 : 0A70;  -- 	LOAD   AtanX
+           225 : 1271;  -- 	STORE  AtanY
+           226 : 0A73;  -- 	LOAD   AtanT
+           227 : 1270;  -- 	STORE  AtanX
+           228 : 3A2D;  -- 	JPOS   A2_R2        ; If Y positive, octants 2,3
+           229 : 8231;  -- 	CALL   A2_calc      ; else octants 6, 7
+           22A : 820E;  -- 	CALL   Neg          ; Negatge the number
+           22B : 690E;  -- 	ADDI   270          ; theta' = 270 - theta
+           22C : 8800;  -- 	RETURN
+           22D : 8231;  -- 	CALL   A2_calc      ; Octants 2, 3
+           22E : 820E;  -- 	CALL   Neg          ; negate the angle
+           22F : 685A;  -- 	ADDI   90           ; theta' = 90 - theta
+           230 : 8800;  -- 	RETURN
+           231 : 0A71;  -- 	LOAD   AtanY
+           232 : 12D0;  -- 	STORE  d16sN        ; Y in numerator
+           233 : 0A70;  -- 	LOAD   AtanX
+           234 : 12D1;  -- 	STORE  d16sD        ; X in denominator
+           235 : 825D;  -- 	CALL   A2_div       ; divide
+           236 : 0AD6;  -- 	LOAD   dres16sQ     ; get the quotient (remainder ignored)
+           237 : 1272;  -- 	STORE  AtanRatio
+           238 : 1299;  -- 	STORE  m16sA
+           239 : 129A;  -- 	STORE  m16sB
+           23A : 8254;  -- 	CALL   A2_mult      ; X^2
+           23B : 1299;  -- 	STORE  m16sA
+           23C : 0A74;  -- 	LOAD   A2c
+           23D : 129A;  -- 	STORE  m16sB
+           23E : 8254;  -- 	CALL   A2_mult
+           23F : 6900;  -- 	ADDI   256          ; 256/256+0.28125X^2
+           240 : 12D1;  -- 	STORE  d16sD
+           241 : 0A72;  -- 	LOAD   AtanRatio
+           242 : 12D0;  -- 	STORE  d16sN        ; Ratio in numerator
+           243 : 825D;  -- 	CALL   A2_div       ; divide
+           244 : 0AD6;  -- 	LOAD   dres16sQ     ; get the quotient (remainder ignored)
+           245 : 1299;  -- 	STORE  m16sA        ; <= result in radians
+           246 : 0A75;  -- 	LOAD   A2cd         ; degree conversion factor
+           247 : 129A;  -- 	STORE  m16sB
+           248 : 8254;  -- 	CALL   A2_mult      ; convert to degrees
+           249 : 1273;  -- 	STORE  AtanT
+           24A : 6017;  -- 	SHIFT  -7           ; check 7th bit
+           24B : 4B2F;  -- 	AND    One
+           24C : 4251;  -- 	JZERO  A2_rdwn      ; round down
+           24D : 0A73;  -- 	LOAD   AtanT
+           24E : 6018;  -- 	SHIFT  -8
+           24F : 6801;  -- 	ADDI   1            ; round up
+           250 : 8800;  -- 	RETURN
+           251 : 0A73;  -- 	LOAD   AtanT
+           252 : 6018;  -- 	SHIFT  -8           ; round down
+           253 : 8800;  -- 	RETURN
+           254 : 8276;  -- 	CALL   Mult16s
+           255 : 0A9E;  -- 	LOAD   mres16sH
+           256 : 6008;  -- 	SHIFT  8            ; move high word of result up 8 bits
+           257 : 129E;  -- 	STORE  mres16sH
+           258 : 0A9D;  -- 	LOAD   mres16sL
+           259 : 6018;  -- 	SHIFT  -8           ; move low word of result down 8 bits
+           25A : 4B3A;  -- 	AND    LoByte
+           25B : 529E;  -- 	OR     mres16sH     ; combine high and low words of result
+           25C : 8800;  -- 	RETURN
+           25D : B809;  -- 	LOADI  9            ; loop 8 times (256 = 2^8)
+           25E : 1273;  -- 	STORE  AtanT
+           25F : 0A73;  -- 	LOAD   AtanT
+           260 : 6FFF;  -- 	ADDI   -1
+           261 : 3A64;  -- 	JPOS   A2_DN        ; not done; continue shifting
+           262 : 829F;  -- 	CALL   Div16s       ; do the standard division
+           263 : 8800;  -- 	RETURN
+           264 : 1273;  -- 	STORE  AtanT
+           265 : 0AD0;  -- 	LOAD   d16sN        ; start by trying to scale the numerator
+           266 : 6001;  -- 	SHIFT  1
+           267 : 5AD0;  -- 	XOR    d16sN        ; if the sign changed,
+           268 : 326C;  -- 	JNEG   A2_DD        ; switch to scaling the denominator
+           269 : 5AD0;  -- 	XOR    d16sN        ; get back shifted version
+           26A : 12D0;  -- 	STORE  d16sN
+           26B : 2A5F;  -- 	JUMP   A2_DL
+           26C : 0AD1;  -- 	LOAD   d16sD
+           26D : 6011;  -- 	SHIFT  -1           ; have to scale denominator
+           26E : 12D1;  -- 	STORE  d16sD
+           26F : 2A5F;  -- 	JUMP   A2_DL
+           270 : 0000;  -- AtanX:      DW 0
+           271 : 0000;  -- AtanY:      DW 0
+           272 : 0000;  -- AtanRatio:  DW 0        ; =y/x
+           273 : 0000;  -- AtanT:      DW 0        ; temporary value
+           274 : 0048;  -- A2c:        DW 72       ; 72/256=0.28125, with 8 fractional bits
+           275 : 394C;  -- A2cd:       DW 14668    ; = 180/pi with 8 fractional bits
+           276 : B800;  -- 	LOADI  0
+           277 : 129B;  -- 	STORE  m16sc        ; clear carry
+           278 : 129E;  -- 	STORE  mres16sH     ; clear result
+           279 : B810;  -- 	LOADI  16           ; load 16 to counter
+           27A : 129C;  -- 	STORE  mcnt16s      
+           27B : 0A9B;  -- 	LOAD   m16sc        ; check the carry (from previous iteration)
+           27C : 4280;  -- 	JZERO  Mult16s_noc  ; if no carry, move on
+           27D : 0A9E;  -- 	LOAD   mres16sH     ; if a carry, 
+           27E : 1A99;  -- 	ADD    m16sA        ;  add multiplicand to result H
+           27F : 129E;  -- 	STORE  mres16sH
+           280 : 0A9A;  -- 	LOAD   m16sB
+           281 : 4B2F;  -- 	AND    One          ; check bit 0 of multiplier
+           282 : 129B;  -- 	STORE  m16sc        ; save as next carry
+           283 : 4287;  -- 	JZERO  Mult16s_sh   ; if no carry, move on to shift
+           284 : 0A9E;  -- 	LOAD   mres16sH     ; if bit 0 set,
+           285 : 2299;  -- 	SUB    m16sA        ;  subtract multiplicand from result H
+           286 : 129E;  -- 	STORE  mres16sH
+           287 : 0A9A;  -- 	LOAD   m16sB
+           288 : 6011;  -- 	SHIFT  -1           ; shift result L >>1
+           289 : 4A98;  -- 	AND    c7FFF        ; clear msb
+           28A : 129A;  -- 	STORE  m16sB
+           28B : 0A9E;  -- 	LOAD   mres16sH     ; load result H
+           28C : 600F;  -- 	SHIFT  15           ; move lsb to msb
+           28D : 529A;  -- 	OR     m16sB
+           28E : 129A;  -- 	STORE  m16sB        ; result L now includes carry out from H
+           28F : 0A9E;  -- 	LOAD   mres16sH
+           290 : 6011;  -- 	SHIFT  -1
+           291 : 129E;  -- 	STORE  mres16sH     ; shift result H >>1
+           292 : 0A9C;  -- 	LOAD   mcnt16s
+           293 : 6FFF;  -- 	ADDI   -1           ; check counter
+           294 : 3A7A;  -- 	JPOS   Mult16s_loop ; need to iterate 16 times
+           295 : 0A9A;  -- 	LOAD   m16sB
+           296 : 129D;  -- 	STORE  mres16sL     ; multiplier and result L shared a word
+           297 : 8800;  -- 	RETURN              ; Done
+           298 : 7FFF;  -- c7FFF: DW &H7FFF
+           299 : 0000;  -- m16sA: DW 0 ; multiplicand
+           29A : 0000;  -- m16sB: DW 0 ; multipler
+           29B : 0000;  -- m16sc: DW 0 ; carry
+           29C : 0000;  -- mcnt16s: DW 0 ; counter
+           29D : 0000;  -- mres16sL: DW 0 ; result low
+           29E : 0000;  -- mres16sH: DW 0 ; result high
+           29F : B800;  -- 	LOADI  0
+           2A0 : 12D7;  -- 	STORE  dres16sR     ; clear remainder result
+           2A1 : 12D4;  -- 	STORE  d16sC1       ; clear carry
+           2A2 : 0AD0;  -- 	LOAD   d16sN
+           2A3 : 5AD1;  -- 	XOR    d16sD
+           2A4 : 12D2;  -- 	STORE  d16sS        ; sign determination = N XOR D
+           2A5 : B811;  -- 	LOADI  17
+           2A6 : 12D3;  -- 	STORE  d16sT        ; preload counter with 17 (16+1)
+           2A7 : 0AD1;  -- 	LOAD   d16sD
+           2A8 : 820D;  -- 	CALL   Abs          ; take absolute value of denominator
+           2A9 : 12D1;  -- 	STORE  d16sD
+           2AA : 0AD0;  -- 	LOAD   d16sN
+           2AB : 820D;  -- 	CALL   Abs          ; take absolute value of numerator
+           2AC : 12D0;  -- 	STORE  d16sN
+           2AD : 0AD0;  -- 	LOAD   d16sN
+           2AE : 601F;  -- 	SHIFT  -15          ; get msb
+           2AF : 4B2F;  -- 	AND    One          ; only msb (because shift is arithmetic)
+           2B0 : 12D5;  -- 	STORE  d16sC2       ; store as carry
+           2B1 : 0AD0;  -- 	LOAD   d16sN
+           2B2 : 6001;  -- 	SHIFT  1            ; shift <<1
+           2B3 : 52D4;  -- 	OR     d16sC1       ; with carry
+           2B4 : 12D0;  -- 	STORE  d16sN
+           2B5 : 0AD3;  -- 	LOAD   d16sT
+           2B6 : 6FFF;  -- 	ADDI   -1           ; decrement counter
+           2B7 : 42C7;  -- 	JZERO  Div16s_sign  ; if finished looping, finalize result
+           2B8 : 12D3;  -- 	STORE  d16sT
+           2B9 : 0AD7;  -- 	LOAD   dres16sR
+           2BA : 6001;  -- 	SHIFT  1            ; shift remainder
+           2BB : 52D5;  -- 	OR     d16sC2       ; with carry from other shift
+           2BC : 22D1;  -- 	SUB    d16sD        ; subtract denominator from remainder
+           2BD : 32C2;  -- 	JNEG   Div16s_add   ; if negative, need to add it back
+           2BE : 12D7;  -- 	STORE  dres16sR
+           2BF : B801;  -- 	LOADI  1
+           2C0 : 12D4;  -- 	STORE  d16sC1       ; set carry
+           2C1 : 2AAD;  -- 	JUMP   Div16s_loop
+           2C2 : 1AD1;  -- 	ADD    d16sD        ; add denominator back in
+           2C3 : 12D7;  -- 	STORE  dres16sR
+           2C4 : B800;  -- 	LOADI  0
+           2C5 : 12D4;  -- 	STORE  d16sC1       ; clear carry
+           2C6 : 2AAD;  -- 	JUMP   Div16s_loop
+           2C7 : 0AD0;  -- 	LOAD   d16sN
+           2C8 : 12D6;  -- 	STORE  dres16sQ     ; numerator was used to hold quotient result
+           2C9 : 0AD2;  -- 	LOAD   d16sS        ; check the sign indicator
+           2CA : 32CC;  -- 	JNEG   Div16s_neg
+           2CB : 8800;  -- 	RETURN
+           2CC : 0AD6;  -- 	LOAD   dres16sQ     ; need to negate the result
+           2CD : 820E;  -- 	CALL   Neg
+           2CE : 12D6;  -- 	STORE  dres16sQ
+           2CF : 8800;  -- 	RETURN	
+           2D0 : 0000;  -- d16sN: DW 0 ; numerator
+           2D1 : 0000;  -- d16sD: DW 0 ; denominator
+           2D2 : 0000;  -- d16sS: DW 0 ; sign value
+           2D3 : 0000;  -- d16sT: DW 0 ; temp counter
+           2D4 : 0000;  -- d16sC1: DW 0 ; carry value
+           2D5 : 0000;  -- d16sC2: DW 0 ; carry value
+           2D6 : 0000;  -- dres16sQ: DW 0 ; quotient result
+           2D7 : 0000;  -- dres16sR: DW 0 ; remainder result
+           2D8 : 0B02;  -- 	LOAD   L2A
+           2D9 : 820D;  -- 	CALL   Abs
+           2DA : 1304;  -- 	STORE  L2T1
+           2DB : 0B03;  -- 	LOAD   L2B
+           2DC : 820D;  -- 	CALL   Abs
+           2DD : 2304;  -- 	SUB    L2T1
+           2DE : 32FA;  -- 	JNEG   GDSwap    ; swap if needed to get largest value in X
+           2DF : 1B04;  -- 	ADD    L2T1
+           2E0 : 1299;  -- 	STORE  m16sa
+           2E1 : B8F6;  -- 	LOADI  246       ; max * 246
+           2E2 : 129A;  -- 	STORE  m16sB
+           2E3 : 8276;  -- 	CALL   Mult16s
+           2E4 : 0A9E;  -- 	LOAD   mres16sH
+           2E5 : 6008;  -- 	SHIFT  8
+           2E6 : 1305;  -- 	STORE  L2T2
+           2E7 : 0A9D;  -- 	LOAD   mres16sL
+           2E8 : 6018;  -- 	SHIFT  -8        ; / 256
+           2E9 : 4B3A;  -- 	AND    LoByte
+           2EA : 5305;  -- 	OR     L2T2
+           2EB : 1306;  -- 	STORE  L2T3
+           2EC : 0B04;  -- 	LOAD   L2T1
+           2ED : 1299;  -- 	STORE  m16sa
+           2EE : B868;  -- 	LOADI  104       ; min * 104
+           2EF : 129A;  -- 	STORE  m16sB
+           2F0 : 8276;  -- 	CALL   Mult16s
+           2F1 : 0A9E;  -- 	LOAD   mres16sH
+           2F2 : 6008;  -- 	SHIFT  8
+           2F3 : 1305;  -- 	STORE  L2T2
+           2F4 : 0A9D;  -- 	LOAD   mres16sL
+           2F5 : 6018;  -- 	SHIFT  -8        ; / 256
+           2F6 : 4B3A;  -- 	AND    LoByte
+           2F7 : 5305;  -- 	OR     L2T2
+           2F8 : 1B06;  -- 	ADD    L2T3     ; sum
+           2F9 : 8800;  -- 	RETURN
+           2FA : 1B04;  -- 	ADD    L2T1
+           2FB : 1305;  -- 	STORE  L2T2
+           2FC : 0B04;  -- 	LOAD   L2T1
+           2FD : 1306;  -- 	STORE  L2T3
+           2FE : 0B05;  -- 	LOAD   L2T2
+           2FF : 1304;  -- 	STORE  L2T1
+           300 : 0B06;  -- 	LOAD   L2T3
+           301 : 2AE0;  -- 	JUMP   CalcDist
+           302 : 0000;  -- L2A:  DW 0
+           303 : 0000;  -- L2B:  DW 0
+           304 : 0000;  -- L2T1: DW 0
+           305 : 0000;  -- L2T2: DW 0
+           306 : 0000;  -- L2T3: DW 0
+           307 : 9802;  -- 	OUT    Timer
+           308 : 9002;  -- 	IN     Timer
+           309 : 6FFD;  -- 	ADDI   -3
+           30A : 3308;  -- 	JNEG   WaitingLoop
+           30B : 8800;  -- 	RETURN
+           30C : 9802;  -- 	OUT    Timer
+           30D : 9002;  -- 	IN     Timer
+           30E : 6FFF;  -- 	ADDI   -1
+           30F : 330D;  -- 	JNEG   WaitingLoop2
+           310 : 8800;  -- 	RETURN
+           311 : 9802;  -- 	OUT    Timer
+           312 : 9002;  -- 	IN     Timer
+           313 : 6FF6;  -- 	ADDI   -10
+           314 : 3312;  -- 	JNEG   WaitingLoop3
+           315 : 8800;  -- 	RETURN
+           316 : 203A;  -- I2CWCmd:  DW &H203A    ; write two i2c bytes, addr 0x3A
+           317 : 123A;  -- I2CRCmd:  DW &H123A    ; write one byte, read two bytes, addr 0x3A
+           318 : 0032;  -- AccXAddr: DW &H32      ; X acceleration register address.
+           319 : 0034;  -- AccYAddr: DW &H34      ; Y acceleration register address.
+           31A : 0006;  -- 	DW 6           ; Number of commands to send
+           31B : 3100;  -- 	DW &H3100      ; Dummy transaction to sync I2C bus if needed	
+           31C : 3100;  -- 	DW &H3100      ; Dummy transaction to sync I2C bus if needed	
+           31D : 3100;  -- 	DW &H3100      ; Right-justified 10-bit data, +/-2 G
+           31E : 3800;  -- 	DW &H3800      ; No FIFO
+           31F : 2C0A;  -- 	DW &H2C0A      ; 25 samples per second
+           320 : 2D08;  -- 	DW &H2D08      ; No sleep	
+           321 : 0000;  -- Temp:      DW 0
+           322 : 0000;  -- Pattern:   DW 0
+           323 : 0000;  -- Score:     DW 0
+           324 : 0013;  -- DisplayP:	 DW &B10011
+           325 : 0014;  -- DisplayU:	 DW &B10100
+           326 : 0015;  -- DisplayS:	 DW &B10101
+           327 : 0016;  -- DisplayH:	 DW &B10110
+           328 : 0010;  -- DisplayT:	 DW &B10000
+           329 : 0011;  -- DisplayI:	 DW &B10001
+           32A : 0012;  -- DisplayL:	 DW &B10010
+           32B : 0017;  -- DisplayF:	 DW &B10111
+           32C : 001F;  -- DisplayBlank: DW &B11111
+           32D : 0000;  -- Zero:      DW 0
+           32E : FFFF;  -- NegOne:    DW -1
+           32F : 0001;  -- One:	   DW &B0000000001
+           330 : 0001;  -- Bit0:      DW &B0000000001
+           331 : 0002;  -- Bit1:      DW &B0000000010
+           332 : 0004;  -- Bit2:      DW &B0000000100
+           333 : 0008;  -- Bit3:      DW &B0000001000
+           334 : 0010;  -- Bit4:      DW &B0000010000
+           335 : 0020;  -- Bit5:      DW &B0000100000
+           336 : 0040;  -- Bit6:      DW &B0001000000
+           337 : 0080;  -- Bit7:      DW &B0010000000
+           338 : 0100;  -- Bit8:      DW &B0100000000
+           339 : 0200;  -- Bit9:      DW &B1000000000
+           33A : 00FF;  -- LoByte:    DW &H00FF
+           33B : FF00;  -- HiByte:    DW &HFF00
+           33C : 0000;  -- AccelVal:   DW &B0000000000
+  END;

@@ -14,6 +14,7 @@ SW[6] => DIG_IN:inst7.DI[6]
 SW[7] => DIG_IN:inst7.DI[7]
 SW[8] => DIG_IN:inst7.DI[8]
 SW[9] => DIG_IN:inst7.DI[9]
+Button1 => Button_In:inst14.DI[0]
 GSENSOR_SCLK <> I2C_INTERFACE:inst13.SCL
 Arduino_IO[0] <= SQ_GEN:inst11.SQ
 Arduino_IO[1] <= Music_Gen:inst15.SQ
@@ -1107,42 +1108,42 @@ dbg_IR[15] <= IR[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component
-wren_a => altsyncram_scr3:auto_generated.wren_a
+wren_a => altsyncram_mpr3:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
 rden_b => ~NO_FANOUT~
-data_a[0] => altsyncram_scr3:auto_generated.data_a[0]
-data_a[1] => altsyncram_scr3:auto_generated.data_a[1]
-data_a[2] => altsyncram_scr3:auto_generated.data_a[2]
-data_a[3] => altsyncram_scr3:auto_generated.data_a[3]
-data_a[4] => altsyncram_scr3:auto_generated.data_a[4]
-data_a[5] => altsyncram_scr3:auto_generated.data_a[5]
-data_a[6] => altsyncram_scr3:auto_generated.data_a[6]
-data_a[7] => altsyncram_scr3:auto_generated.data_a[7]
-data_a[8] => altsyncram_scr3:auto_generated.data_a[8]
-data_a[9] => altsyncram_scr3:auto_generated.data_a[9]
-data_a[10] => altsyncram_scr3:auto_generated.data_a[10]
-data_a[11] => altsyncram_scr3:auto_generated.data_a[11]
-data_a[12] => altsyncram_scr3:auto_generated.data_a[12]
-data_a[13] => altsyncram_scr3:auto_generated.data_a[13]
-data_a[14] => altsyncram_scr3:auto_generated.data_a[14]
-data_a[15] => altsyncram_scr3:auto_generated.data_a[15]
+data_a[0] => altsyncram_mpr3:auto_generated.data_a[0]
+data_a[1] => altsyncram_mpr3:auto_generated.data_a[1]
+data_a[2] => altsyncram_mpr3:auto_generated.data_a[2]
+data_a[3] => altsyncram_mpr3:auto_generated.data_a[3]
+data_a[4] => altsyncram_mpr3:auto_generated.data_a[4]
+data_a[5] => altsyncram_mpr3:auto_generated.data_a[5]
+data_a[6] => altsyncram_mpr3:auto_generated.data_a[6]
+data_a[7] => altsyncram_mpr3:auto_generated.data_a[7]
+data_a[8] => altsyncram_mpr3:auto_generated.data_a[8]
+data_a[9] => altsyncram_mpr3:auto_generated.data_a[9]
+data_a[10] => altsyncram_mpr3:auto_generated.data_a[10]
+data_a[11] => altsyncram_mpr3:auto_generated.data_a[11]
+data_a[12] => altsyncram_mpr3:auto_generated.data_a[12]
+data_a[13] => altsyncram_mpr3:auto_generated.data_a[13]
+data_a[14] => altsyncram_mpr3:auto_generated.data_a[14]
+data_a[15] => altsyncram_mpr3:auto_generated.data_a[15]
 data_b[0] => ~NO_FANOUT~
-address_a[0] => altsyncram_scr3:auto_generated.address_a[0]
-address_a[1] => altsyncram_scr3:auto_generated.address_a[1]
-address_a[2] => altsyncram_scr3:auto_generated.address_a[2]
-address_a[3] => altsyncram_scr3:auto_generated.address_a[3]
-address_a[4] => altsyncram_scr3:auto_generated.address_a[4]
-address_a[5] => altsyncram_scr3:auto_generated.address_a[5]
-address_a[6] => altsyncram_scr3:auto_generated.address_a[6]
-address_a[7] => altsyncram_scr3:auto_generated.address_a[7]
-address_a[8] => altsyncram_scr3:auto_generated.address_a[8]
-address_a[9] => altsyncram_scr3:auto_generated.address_a[9]
-address_a[10] => altsyncram_scr3:auto_generated.address_a[10]
+address_a[0] => altsyncram_mpr3:auto_generated.address_a[0]
+address_a[1] => altsyncram_mpr3:auto_generated.address_a[1]
+address_a[2] => altsyncram_mpr3:auto_generated.address_a[2]
+address_a[3] => altsyncram_mpr3:auto_generated.address_a[3]
+address_a[4] => altsyncram_mpr3:auto_generated.address_a[4]
+address_a[5] => altsyncram_mpr3:auto_generated.address_a[5]
+address_a[6] => altsyncram_mpr3:auto_generated.address_a[6]
+address_a[7] => altsyncram_mpr3:auto_generated.address_a[7]
+address_a[8] => altsyncram_mpr3:auto_generated.address_a[8]
+address_a[9] => altsyncram_mpr3:auto_generated.address_a[9]
+address_a[10] => altsyncram_mpr3:auto_generated.address_a[10]
 address_b[0] => ~NO_FANOUT~
 addressstall_a => ~NO_FANOUT~
 addressstall_b => ~NO_FANOUT~
-clock0 => altsyncram_scr3:auto_generated.clock0
+clock0 => altsyncram_mpr3:auto_generated.clock0
 clock1 => ~NO_FANOUT~
 clocken0 => ~NO_FANOUT~
 clocken1 => ~NO_FANOUT~
@@ -1152,29 +1153,29 @@ aclr0 => ~NO_FANOUT~
 aclr1 => ~NO_FANOUT~
 byteena_a[0] => ~NO_FANOUT~
 byteena_b[0] => ~NO_FANOUT~
-q_a[0] <= altsyncram_scr3:auto_generated.q_a[0]
-q_a[1] <= altsyncram_scr3:auto_generated.q_a[1]
-q_a[2] <= altsyncram_scr3:auto_generated.q_a[2]
-q_a[3] <= altsyncram_scr3:auto_generated.q_a[3]
-q_a[4] <= altsyncram_scr3:auto_generated.q_a[4]
-q_a[5] <= altsyncram_scr3:auto_generated.q_a[5]
-q_a[6] <= altsyncram_scr3:auto_generated.q_a[6]
-q_a[7] <= altsyncram_scr3:auto_generated.q_a[7]
-q_a[8] <= altsyncram_scr3:auto_generated.q_a[8]
-q_a[9] <= altsyncram_scr3:auto_generated.q_a[9]
-q_a[10] <= altsyncram_scr3:auto_generated.q_a[10]
-q_a[11] <= altsyncram_scr3:auto_generated.q_a[11]
-q_a[12] <= altsyncram_scr3:auto_generated.q_a[12]
-q_a[13] <= altsyncram_scr3:auto_generated.q_a[13]
-q_a[14] <= altsyncram_scr3:auto_generated.q_a[14]
-q_a[15] <= altsyncram_scr3:auto_generated.q_a[15]
+q_a[0] <= altsyncram_mpr3:auto_generated.q_a[0]
+q_a[1] <= altsyncram_mpr3:auto_generated.q_a[1]
+q_a[2] <= altsyncram_mpr3:auto_generated.q_a[2]
+q_a[3] <= altsyncram_mpr3:auto_generated.q_a[3]
+q_a[4] <= altsyncram_mpr3:auto_generated.q_a[4]
+q_a[5] <= altsyncram_mpr3:auto_generated.q_a[5]
+q_a[6] <= altsyncram_mpr3:auto_generated.q_a[6]
+q_a[7] <= altsyncram_mpr3:auto_generated.q_a[7]
+q_a[8] <= altsyncram_mpr3:auto_generated.q_a[8]
+q_a[9] <= altsyncram_mpr3:auto_generated.q_a[9]
+q_a[10] <= altsyncram_mpr3:auto_generated.q_a[10]
+q_a[11] <= altsyncram_mpr3:auto_generated.q_a[11]
+q_a[12] <= altsyncram_mpr3:auto_generated.q_a[12]
+q_a[13] <= altsyncram_mpr3:auto_generated.q_a[13]
+q_a[14] <= altsyncram_mpr3:auto_generated.q_a[14]
+q_a[15] <= altsyncram_mpr3:auto_generated.q_a[15]
 q_b[0] <= <GND>
 eccstatus[0] <= <GND>
 eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component|altsyncram_scr3:auto_generated
+|SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component|altsyncram_mpr3:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -1740,6 +1741,7 @@ IO_ADDR[0] => Equal11.IN7
 IO_ADDR[0] => Equal12.IN7
 IO_ADDR[0] => Equal13.IN6
 IO_ADDR[0] => Equal14.IN9
+IO_ADDR[0] => Equal15.IN10
 IO_ADDR[1] => Equal0.IN9
 IO_ADDR[1] => Equal1.IN9
 IO_ADDR[1] => Equal2.IN10
@@ -1755,6 +1757,7 @@ IO_ADDR[1] => Equal11.IN10
 IO_ADDR[1] => Equal12.IN6
 IO_ADDR[1] => Equal13.IN5
 IO_ADDR[1] => Equal14.IN8
+IO_ADDR[1] => Equal15.IN8
 IO_ADDR[2] => Equal0.IN8
 IO_ADDR[2] => Equal1.IN8
 IO_ADDR[2] => Equal2.IN8
@@ -1770,6 +1773,7 @@ IO_ADDR[2] => Equal11.IN6
 IO_ADDR[2] => Equal12.IN5
 IO_ADDR[2] => Equal13.IN4
 IO_ADDR[2] => Equal14.IN7
+IO_ADDR[2] => Equal15.IN7
 IO_ADDR[3] => Equal0.IN7
 IO_ADDR[3] => Equal1.IN7
 IO_ADDR[3] => Equal2.IN7
@@ -1785,6 +1789,7 @@ IO_ADDR[3] => Equal11.IN5
 IO_ADDR[3] => Equal12.IN4
 IO_ADDR[3] => Equal13.IN3
 IO_ADDR[3] => Equal14.IN6
+IO_ADDR[3] => Equal15.IN6
 IO_ADDR[4] => Equal0.IN6
 IO_ADDR[4] => Equal1.IN6
 IO_ADDR[4] => Equal2.IN6
@@ -1800,6 +1805,7 @@ IO_ADDR[4] => Equal11.IN9
 IO_ADDR[4] => Equal12.IN3
 IO_ADDR[4] => Equal13.IN10
 IO_ADDR[4] => Equal14.IN5
+IO_ADDR[4] => Equal15.IN5
 IO_ADDR[5] => Equal0.IN5
 IO_ADDR[5] => Equal1.IN5
 IO_ADDR[5] => Equal2.IN5
@@ -1815,6 +1821,7 @@ IO_ADDR[5] => Equal11.IN4
 IO_ADDR[5] => Equal12.IN10
 IO_ADDR[5] => Equal13.IN9
 IO_ADDR[5] => Equal14.IN10
+IO_ADDR[5] => Equal15.IN9
 IO_ADDR[6] => Equal0.IN4
 IO_ADDR[6] => Equal1.IN4
 IO_ADDR[6] => Equal2.IN4
@@ -1830,6 +1837,7 @@ IO_ADDR[6] => Equal11.IN3
 IO_ADDR[6] => Equal12.IN9
 IO_ADDR[6] => Equal13.IN8
 IO_ADDR[6] => Equal14.IN4
+IO_ADDR[6] => Equal15.IN4
 IO_ADDR[7] => Equal0.IN3
 IO_ADDR[7] => Equal1.IN3
 IO_ADDR[7] => Equal2.IN3
@@ -1845,6 +1853,7 @@ IO_ADDR[7] => Equal11.IN8
 IO_ADDR[7] => Equal12.IN8
 IO_ADDR[7] => Equal13.IN7
 IO_ADDR[7] => Equal14.IN3
+IO_ADDR[7] => Equal15.IN3
 IO_ADDR[8] => Equal0.IN2
 IO_ADDR[8] => Equal1.IN2
 IO_ADDR[8] => Equal2.IN2
@@ -1860,6 +1869,7 @@ IO_ADDR[8] => Equal11.IN2
 IO_ADDR[8] => Equal12.IN2
 IO_ADDR[8] => Equal13.IN2
 IO_ADDR[8] => Equal14.IN2
+IO_ADDR[8] => Equal15.IN2
 IO_ADDR[9] => Equal0.IN1
 IO_ADDR[9] => Equal1.IN1
 IO_ADDR[9] => Equal2.IN1
@@ -1875,6 +1885,7 @@ IO_ADDR[9] => Equal11.IN1
 IO_ADDR[9] => Equal12.IN1
 IO_ADDR[9] => Equal13.IN1
 IO_ADDR[9] => Equal14.IN1
+IO_ADDR[9] => Equal15.IN1
 IO_ADDR[10] => Equal0.IN0
 IO_ADDR[10] => Equal1.IN0
 IO_ADDR[10] => Equal2.IN0
@@ -1890,6 +1901,7 @@ IO_ADDR[10] => Equal11.IN0
 IO_ADDR[10] => Equal12.IN0
 IO_ADDR[10] => Equal13.IN0
 IO_ADDR[10] => Equal14.IN0
+IO_ADDR[10] => Equal15.IN0
 IO_CYCLE => SWITCH_EN.IN1
 IO_CYCLE => LED_EN.IN1
 IO_CYCLE => TIMER_EN.IN1
@@ -1905,6 +1917,7 @@ IO_CYCLE => I2C_RDY_EN.IN1
 IO_CYCLE => DP_EN.IN1
 IO_CYCLE => SQ_EN.IN1
 IO_CYCLE => Music_EN.IN1
+IO_CYCLE => Button_EN.IN1
 SWITCH_EN <= SWITCH_EN.DB_MAX_OUTPUT_PORT_TYPE
 LED_EN <= LED_EN.DB_MAX_OUTPUT_PORT_TYPE
 TIMER_EN <= TIMER_EN.DB_MAX_OUTPUT_PORT_TYPE
@@ -1920,6 +1933,7 @@ I2C_RDY_EN <= I2C_RDY_EN.DB_MAX_OUTPUT_PORT_TYPE
 DP_EN <= DP_EN.DB_MAX_OUTPUT_PORT_TYPE
 SQ_EN <= SQ_EN.DB_MAX_OUTPUT_PORT_TYPE
 Music_EN <= Music_EN.DB_MAX_OUTPUT_PORT_TYPE
+Button_EN <= Button_EN.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |SCOMP_System|DIG_IN:inst7
@@ -1975,6 +1989,126 @@ IO_DATA[15] <> LPM_BUSTRI:IO_BUS.TRIDATA[15]
 
 
 |SCOMP_System|DIG_IN:inst7|LPM_BUSTRI:IO_BUS
+tridata[0] <> dout[0]
+tridata[1] <> dout[1]
+tridata[2] <> dout[2]
+tridata[3] <> dout[3]
+tridata[4] <> dout[4]
+tridata[5] <> dout[5]
+tridata[6] <> dout[6]
+tridata[7] <> dout[7]
+tridata[8] <> dout[8]
+tridata[9] <> dout[9]
+tridata[10] <> dout[10]
+tridata[11] <> dout[11]
+tridata[12] <> dout[12]
+tridata[13] <> dout[13]
+tridata[14] <> dout[14]
+tridata[15] <> dout[15]
+data[0] => dout[0].DATAIN
+data[1] => dout[1].DATAIN
+data[2] => dout[2].DATAIN
+data[3] => dout[3].DATAIN
+data[4] => dout[4].DATAIN
+data[5] => dout[5].DATAIN
+data[6] => dout[6].DATAIN
+data[7] => dout[7].DATAIN
+data[8] => dout[8].DATAIN
+data[9] => dout[9].DATAIN
+data[10] => dout[10].DATAIN
+data[11] => dout[11].DATAIN
+data[12] => dout[12].DATAIN
+data[13] => dout[13].DATAIN
+data[14] => dout[14].DATAIN
+data[15] => dout[15].DATAIN
+enabletr => ~NO_FANOUT~
+enabledt => dout[15].OE
+enabledt => dout[14].OE
+enabledt => dout[13].OE
+enabledt => dout[12].OE
+enabledt => dout[11].OE
+enabledt => dout[10].OE
+enabledt => dout[9].OE
+enabledt => dout[8].OE
+enabledt => dout[7].OE
+enabledt => dout[6].OE
+enabledt => dout[5].OE
+enabledt => dout[4].OE
+enabledt => dout[3].OE
+enabledt => dout[2].OE
+enabledt => dout[1].OE
+enabledt => dout[0].OE
+result[0] <= result[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= result[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= result[5].DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= result[6].DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= result[7].DB_MAX_OUTPUT_PORT_TYPE
+result[8] <= result[8].DB_MAX_OUTPUT_PORT_TYPE
+result[9] <= result[9].DB_MAX_OUTPUT_PORT_TYPE
+result[10] <= result[10].DB_MAX_OUTPUT_PORT_TYPE
+result[11] <= result[11].DB_MAX_OUTPUT_PORT_TYPE
+result[12] <= result[12].DB_MAX_OUTPUT_PORT_TYPE
+result[13] <= result[13].DB_MAX_OUTPUT_PORT_TYPE
+result[14] <= result[14].DB_MAX_OUTPUT_PORT_TYPE
+result[15] <= result[15].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SCOMP_System|Button_In:inst14
+CS => LPM_BUSTRI:IO_BUS.ENABLEDT
+CS => B_DI[0].CLK
+CS => B_DI[1].CLK
+CS => B_DI[2].CLK
+CS => B_DI[3].CLK
+CS => B_DI[4].CLK
+CS => B_DI[5].CLK
+CS => B_DI[6].CLK
+CS => B_DI[7].CLK
+CS => B_DI[8].CLK
+CS => B_DI[9].CLK
+CS => B_DI[10].CLK
+CS => B_DI[11].CLK
+CS => B_DI[12].CLK
+CS => B_DI[13].CLK
+CS => B_DI[14].CLK
+CS => B_DI[15].CLK
+DI[0] => B_DI[0].DATAIN
+DI[1] => B_DI[1].DATAIN
+DI[2] => B_DI[2].DATAIN
+DI[3] => B_DI[3].DATAIN
+DI[4] => B_DI[4].DATAIN
+DI[5] => B_DI[5].DATAIN
+DI[6] => B_DI[6].DATAIN
+DI[7] => B_DI[7].DATAIN
+DI[8] => B_DI[8].DATAIN
+DI[9] => B_DI[9].DATAIN
+DI[10] => B_DI[10].DATAIN
+DI[11] => B_DI[11].DATAIN
+DI[12] => B_DI[12].DATAIN
+DI[13] => B_DI[13].DATAIN
+DI[14] => B_DI[14].DATAIN
+DI[15] => B_DI[15].DATAIN
+IO_DATA[0] <> LPM_BUSTRI:IO_BUS.TRIDATA[0]
+IO_DATA[1] <> LPM_BUSTRI:IO_BUS.TRIDATA[1]
+IO_DATA[2] <> LPM_BUSTRI:IO_BUS.TRIDATA[2]
+IO_DATA[3] <> LPM_BUSTRI:IO_BUS.TRIDATA[3]
+IO_DATA[4] <> LPM_BUSTRI:IO_BUS.TRIDATA[4]
+IO_DATA[5] <> LPM_BUSTRI:IO_BUS.TRIDATA[5]
+IO_DATA[6] <> LPM_BUSTRI:IO_BUS.TRIDATA[6]
+IO_DATA[7] <> LPM_BUSTRI:IO_BUS.TRIDATA[7]
+IO_DATA[8] <> LPM_BUSTRI:IO_BUS.TRIDATA[8]
+IO_DATA[9] <> LPM_BUSTRI:IO_BUS.TRIDATA[9]
+IO_DATA[10] <> LPM_BUSTRI:IO_BUS.TRIDATA[10]
+IO_DATA[11] <> LPM_BUSTRI:IO_BUS.TRIDATA[11]
+IO_DATA[12] <> LPM_BUSTRI:IO_BUS.TRIDATA[12]
+IO_DATA[13] <> LPM_BUSTRI:IO_BUS.TRIDATA[13]
+IO_DATA[14] <> LPM_BUSTRI:IO_BUS.TRIDATA[14]
+IO_DATA[15] <> LPM_BUSTRI:IO_BUS.TRIDATA[15]
+
+
+|SCOMP_System|Button_In:inst14|LPM_BUSTRI:IO_BUS
 tridata[0] <> dout[0]
 tridata[1] <> dout[1]
 tridata[2] <> dout[2]

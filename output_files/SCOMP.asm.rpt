@@ -1,5 +1,5 @@
 Assembler report for SCOMP
-Mon Nov 16 22:56:50 2020
+Tue Nov 17 02:17:55 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/output_files/SCOMP.sof
+  5. Assembler Device Options: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/ECE2031-Project FINAL/output_files/SCOMP.sof
   6. Assembler Messages
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Nov 16 22:56:50 2020 ;
+; Assembler Status      ; Successful - Tue Nov 17 02:17:55 2020 ;
 ; Revision Name         ; SCOMP                                 ;
 ; Top-level Entity Name ; SCOMP_System                          ;
 ; Family                ; MAX 10                                ;
@@ -85,23 +85,23 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+----------------+----------------+
 
 
-+------------------------------------------------------------------------------+
-; Assembler Generated Files                                                    ;
-+------------------------------------------------------------------------------+
-; File Name                                                                    ;
-+------------------------------------------------------------------------------+
-; C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/output_files/SCOMP.sof ;
-+------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                             ;
++-------------------------------------------------------------------------------------------------------+
+; File Name                                                                                             ;
++-------------------------------------------------------------------------------------------------------+
+; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/ECE2031-Project FINAL/output_files/SCOMP.sof ;
++-------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/output_files/SCOMP.sof ;
-+----------------+---------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                               ;
-+----------------+---------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x00382F36                                                                            ;
-; Checksum       ; 0x00382F36                                                                            ;
-+----------------+---------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/ECE2031-Project FINAL/output_files/SCOMP.sof ;
++----------------+----------------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                        ;
++----------------+----------------------------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x0039FB74                                                                                                     ;
+; Checksum       ; 0x0039FB74                                                                                                     ;
++----------------+----------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -110,14 +110,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Mon Nov 16 22:56:46 2020
+    Info: Processing started: Tue Nov 17 02:17:52 2020
 Info: Command: quartus_asm --read_settings_files=on --write_settings_files=off SCOMP -c SCOMP
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4706 megabytes
-    Info: Processing ended: Mon Nov 16 22:56:50 2020
+    Info: Peak virtual memory: 4707 megabytes
+    Info: Processing ended: Tue Nov 17 02:17:56 2020
     Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
 
 
