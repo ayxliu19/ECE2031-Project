@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(10M50DAF484) Path("C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/output_files/") File("SCOMP.sof") MfrSpec(OpMask(1));
+		Device PartName(10M50DAF484) Path("C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/output_files/") File("SCOMP.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

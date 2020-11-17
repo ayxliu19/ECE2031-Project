@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SCOMP
-Sun Nov 15 23:57:22 2020
+Mon Nov 16 22:46:13 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -62,15 +62,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Nov 15 23:57:22 2020       ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 16 22:46:12 2020       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; SCOMP                                       ;
 ; Top-level Entity Name              ; SCOMP_System                                ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 1,595                                       ;
-;     Total combinational functions  ; 1,458                                       ;
-;     Dedicated logic registers      ; 474                                         ;
-; Total registers                    ; 474                                         ;
+; Total logic elements               ; 1,686                                       ;
+;     Total combinational functions  ; 1,548                                       ;
+;     Dedicated logic registers      ; 477                                         ;
+; Total registers                    ; 477                                         ;
 ; Total pins                         ; 76                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 32,768                                      ;
@@ -187,56 +187,56 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                          ;
-+----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                                            ; Library ;
-+----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
-; I2C_INTERFACE.bdf                ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/I2C_INTERFACE.bdf          ;         ;
-; i2c_master.vhd                   ; yes             ; User VHDL File                         ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/i2c_master.vhd             ;         ;
-; i2c_ctrl.vhd                     ; yes             ; User VHDL File                         ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/i2c_ctrl.vhd               ;         ;
-; HEX_DISP.vhd                     ; yes             ; User VHDL File                         ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/HEX_DISP.vhd               ;         ;
-; DIG_OUT.vhd                      ; yes             ; User VHDL File                         ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/DIG_OUT.vhd                ;         ;
-; DIG_IN.vhd                       ; yes             ; User VHDL File                         ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/DIG_IN.vhd                 ;         ;
-; clk_div.vhd                      ; yes             ; User VHDL File                         ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/clk_div.vhd                ;         ;
-; TIMER.vhd                        ; yes             ; User VHDL File                         ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/TIMER.vhd                  ;         ;
-; IO_DECODER.vhd                   ; yes             ; User VHDL File                         ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/IO_DECODER.vhd             ;         ;
-; SCOMP.vhd                        ; yes             ; User VHDL File                         ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/SCOMP.vhd                  ;         ;
-; SCOMP_System.bdf                 ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/SCOMP_System.bdf           ;         ;
-; PLL_main.vhd                     ; yes             ; User Wizard-Generated File             ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/PLL_main.vhd               ;         ;
-; HEX_DISP_6.bdf                   ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/HEX_DISP_6.bdf             ;         ;
-; Dps.bdf                          ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/Dps.bdf                    ;         ;
-; MusicGen.vhd                     ; yes             ; User VHDL File                         ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/MusicGen.vhd               ;         ;
-; Divider.vhd                      ; yes             ; User Wizard-Generated File             ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/Divider.vhd                ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                           ; c:/users/broughton/desktop/quartus/libraries/megafunctions/altpll.tdf                                                   ;         ;
-; aglobal191.inc                   ; yes             ; Megafunction                           ; c:/users/broughton/desktop/quartus/libraries/megafunctions/aglobal191.inc                                               ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                           ; c:/users/broughton/desktop/quartus/libraries/megafunctions/stratix_pll.inc                                              ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                           ; c:/users/broughton/desktop/quartus/libraries/megafunctions/stratixii_pll.inc                                            ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                           ; c:/users/broughton/desktop/quartus/libraries/megafunctions/cycloneii_pll.inc                                            ;         ;
-; db/pll_main_altpll.v             ; yes             ; Auto-Generated Megafunction            ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/pll_main_altpll.v       ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/users/broughton/desktop/quartus/libraries/megafunctions/altsyncram.tdf                                               ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/users/broughton/desktop/quartus/libraries/megafunctions/stratix_ram_block.inc                                        ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/users/broughton/desktop/quartus/libraries/megafunctions/lpm_mux.inc                                                  ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/users/broughton/desktop/quartus/libraries/megafunctions/lpm_decode.inc                                               ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/users/broughton/desktop/quartus/libraries/megafunctions/a_rdenreg.inc                                                ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/users/broughton/desktop/quartus/libraries/megafunctions/altrom.inc                                                   ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/users/broughton/desktop/quartus/libraries/megafunctions/altram.inc                                                   ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; c:/users/broughton/desktop/quartus/libraries/megafunctions/altdpram.inc                                                 ;         ;
-; db/altsyncram_scr3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/altsyncram_scr3.tdf     ;         ;
-; sqgen.mif                        ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/sqgen.mif                  ;         ;
-; lpm_clshift.tdf                  ; yes             ; Megafunction                           ; c:/users/broughton/desktop/quartus/libraries/megafunctions/lpm_clshift.tdf                                              ;         ;
-; db/lpm_clshift_fuc.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/lpm_clshift_fuc.tdf     ;         ;
-; lpm_bustri.tdf                   ; yes             ; Megafunction                           ; c:/users/broughton/desktop/quartus/libraries/megafunctions/lpm_bustri.tdf                                               ;         ;
-; sq_gen.vhd                       ; yes             ; Auto-Found VHDL File                   ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/sq_gen.vhd                 ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                           ; c:/users/broughton/desktop/quartus/libraries/megafunctions/lpm_divide.tdf                                               ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                           ; c:/users/broughton/desktop/quartus/libraries/megafunctions/abs_divider.inc                                              ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                           ; c:/users/broughton/desktop/quartus/libraries/megafunctions/sign_div_unsign.inc                                          ;         ;
-; db/lpm_divide_ldp.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/lpm_divide_ldp.tdf      ;         ;
-; db/sign_div_unsign_8nh.tdf       ; yes             ; Auto-Generated Megafunction            ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/sign_div_unsign_8nh.tdf ;         ;
-; db/alt_u_div_qke.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/alt_u_div_qke.tdf       ;         ;
-; db/add_sub_t3c.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/add_sub_t3c.tdf         ;         ;
-; db/add_sub_u3c.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/add_sub_u3c.tdf         ;         ;
-+----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                   ;
++----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                     ; Library ;
++----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------+---------+
+; I2C_INTERFACE.bdf                ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/I2C_INTERFACE.bdf          ;         ;
+; i2c_master.vhd                   ; yes             ; User VHDL File                         ; C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/i2c_master.vhd             ;         ;
+; i2c_ctrl.vhd                     ; yes             ; User VHDL File                         ; C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/i2c_ctrl.vhd               ;         ;
+; HEX_DISP.vhd                     ; yes             ; User VHDL File                         ; C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/HEX_DISP.vhd               ;         ;
+; DIG_OUT.vhd                      ; yes             ; User VHDL File                         ; C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/DIG_OUT.vhd                ;         ;
+; DIG_IN.vhd                       ; yes             ; User VHDL File                         ; C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/DIG_IN.vhd                 ;         ;
+; clk_div.vhd                      ; yes             ; User VHDL File                         ; C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/clk_div.vhd                ;         ;
+; TIMER.vhd                        ; yes             ; User VHDL File                         ; C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/TIMER.vhd                  ;         ;
+; IO_DECODER.vhd                   ; yes             ; User VHDL File                         ; C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/IO_DECODER.vhd             ;         ;
+; SCOMP.vhd                        ; yes             ; User VHDL File                         ; C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/SCOMP.vhd                  ;         ;
+; SCOMP_System.bdf                 ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/SCOMP_System.bdf           ;         ;
+; PLL_main.vhd                     ; yes             ; User Wizard-Generated File             ; C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/PLL_main.vhd               ;         ;
+; HEX_DISP_6.bdf                   ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/HEX_DISP_6.bdf             ;         ;
+; Dps.bdf                          ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/Dps.bdf                    ;         ;
+; MusicGen.vhd                     ; yes             ; User VHDL File                         ; C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/MusicGen.vhd               ;         ;
+; Divider.vhd                      ; yes             ; User Wizard-Generated File             ; C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/Divider.vhd                ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altpll.tdf                ;         ;
+; aglobal191.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/aglobal191.inc            ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/stratix_pll.inc           ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/stratixii_pll.inc         ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/cycloneii_pll.inc         ;         ;
+; db/pll_main_altpll.v             ; yes             ; Auto-Generated Megafunction            ; C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/db/pll_main_altpll.v       ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf            ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/stratix_ram_block.inc     ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_mux.inc               ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_decode.inc            ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/a_rdenreg.inc             ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altrom.inc                ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altram.inc                ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altdpram.inc              ;         ;
+; db/altsyncram_scr3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/db/altsyncram_scr3.tdf     ;         ;
+; SqGen.mif                        ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/SqGen.mif                  ;         ;
+; lpm_clshift.tdf                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_clshift.tdf           ;         ;
+; db/lpm_clshift_fuc.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/db/lpm_clshift_fuc.tdf     ;         ;
+; lpm_bustri.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_bustri.tdf            ;         ;
+; sq_gen.vhd                       ; yes             ; Auto-Found VHDL File                   ; C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/sq_gen.vhd                 ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_divide.tdf            ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/abs_divider.inc           ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                           ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/sign_div_unsign.inc       ;         ;
+; db/lpm_divide_v0r.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/db/lpm_divide_v0r.tdf      ;         ;
+; db/sign_div_unsign_dnh.tdf       ; yes             ; Auto-Generated Megafunction            ; C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/db/sign_div_unsign_dnh.tdf ;         ;
+; db/alt_u_div_1le.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/db/alt_u_div_1le.tdf       ;         ;
+; db/add_sub_t3c.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/db/add_sub_t3c.tdf         ;         ;
+; db/add_sub_u3c.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/db/add_sub_u3c.tdf         ;         ;
++----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------+
@@ -244,20 +244,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                  ;
 +---------------------------------------------+----------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 1,595                                                                                  ;
+; Estimated Total logic elements              ; 1,686                                                                                  ;
 ;                                             ;                                                                                        ;
-; Total combinational functions               ; 1458                                                                                   ;
+; Total combinational functions               ; 1548                                                                                   ;
 ; Logic element usage by number of LUT inputs ;                                                                                        ;
-;     -- 4 input functions                    ; 579                                                                                    ;
-;     -- 3 input functions                    ; 646                                                                                    ;
-;     -- <=2 input functions                  ; 233                                                                                    ;
+;     -- 4 input functions                    ; 641                                                                                    ;
+;     -- 3 input functions                    ; 697                                                                                    ;
+;     -- <=2 input functions                  ; 210                                                                                    ;
 ;                                             ;                                                                                        ;
 ; Logic elements by mode                      ;                                                                                        ;
-;     -- normal mode                          ; 1120                                                                                   ;
-;     -- arithmetic mode                      ; 338                                                                                    ;
+;     -- normal mode                          ; 1193                                                                                   ;
+;     -- arithmetic mode                      ; 355                                                                                    ;
 ;                                             ;                                                                                        ;
-; Total registers                             ; 474                                                                                    ;
-;     -- Dedicated logic registers            ; 474                                                                                    ;
+; Total registers                             ; 477                                                                                    ;
+;     -- Dedicated logic registers            ; 477                                                                                    ;
 ;     -- I/O registers                        ; 0                                                                                      ;
 ;                                             ;                                                                                        ;
 ; I/O pins                                    ; 76                                                                                     ;
@@ -269,9 +269,9 @@ https://fpgasoftware.intel.com/eula.
 ;     -- PLLs                                 ; 1                                                                                      ;
 ;                                             ;                                                                                        ;
 ; Maximum fan-out node                        ; PLL_main:inst1|altpll:altpll_component|PLL_main_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 271                                                                                    ;
-; Total fan-out                               ; 6398                                                                                   ;
-; Average fan-out                             ; 3.04                                                                                   ;
+; Maximum fan-out                             ; 270                                                                                    ;
+; Total fan-out                               ; 6755                                                                                   ;
+; Average fan-out                             ; 3.08                                                                                   ;
 +---------------------------------------------+----------------------------------------------------------------------------------------+
 
 
@@ -280,14 +280,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                          ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |SCOMP_System                             ; 1458 (0)            ; 474 (0)                   ; 32768       ; 0          ; 0            ; 0       ; 0         ; 76   ; 0            ; 0          ; |SCOMP_System                                                                                                                                ; SCOMP_System        ; work         ;
+; |SCOMP_System                             ; 1548 (0)            ; 477 (0)                   ; 32768       ; 0          ; 0            ; 0       ; 0         ; 76   ; 0            ; 0          ; |SCOMP_System                                                                                                                                ; SCOMP_System        ; work         ;
 ;    |DIG_IN:inst7|                         ; 0 (0)               ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|DIG_IN:inst7                                                                                                                   ; DIG_IN              ; work         ;
 ;    |DIG_OUT:inst6|                        ; 0 (0)               ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|DIG_OUT:inst6                                                                                                                  ; DIG_OUT             ; work         ;
-;    |Divider:inst17|                       ; 452 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|Divider:inst17                                                                                                                 ; Divider             ; work         ;
-;       |lpm_divide:LPM_DIVIDE_component|   ; 452 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|Divider:inst17|lpm_divide:LPM_DIVIDE_component                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_ldp:auto_generated|  ; 452 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|Divider:inst17|lpm_divide:LPM_DIVIDE_component|lpm_divide_ldp:auto_generated                                                   ; lpm_divide_ldp      ; work         ;
-;             |sign_div_unsign_8nh:divider| ; 452 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|Divider:inst17|lpm_divide:LPM_DIVIDE_component|lpm_divide_ldp:auto_generated|sign_div_unsign_8nh:divider                       ; sign_div_unsign_8nh ; work         ;
-;                |alt_u_div_qke:divider|    ; 452 (452)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|Divider:inst17|lpm_divide:LPM_DIVIDE_component|lpm_divide_ldp:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_qke:divider ; alt_u_div_qke       ; work         ;
+;    |Divider:inst17|                       ; 531 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|Divider:inst17                                                                                                                 ; Divider             ; work         ;
+;       |lpm_divide:LPM_DIVIDE_component|   ; 531 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|Divider:inst17|lpm_divide:LPM_DIVIDE_component                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_v0r:auto_generated|  ; 531 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|Divider:inst17|lpm_divide:LPM_DIVIDE_component|lpm_divide_v0r:auto_generated                                                   ; lpm_divide_v0r      ; work         ;
+;             |sign_div_unsign_dnh:divider| ; 531 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|Divider:inst17|lpm_divide:LPM_DIVIDE_component|lpm_divide_v0r:auto_generated|sign_div_unsign_dnh:divider                       ; sign_div_unsign_dnh ; work         ;
+;                |alt_u_div_1le:divider|    ; 531 (531)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|Divider:inst17|lpm_divide:LPM_DIVIDE_component|lpm_divide_v0r:auto_generated|sign_div_unsign_dnh:divider|alt_u_div_1le:divider ; alt_u_div_1le       ; work         ;
 ;    |Dps:inst10|                           ; 0 (0)               ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|Dps:inst10                                                                                                                     ; Dps                 ; work         ;
 ;    |HEX_DISP_6:inst9|                     ; 102 (0)             ; 30 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9                                                                                                               ; HEX_DISP_6          ; work         ;
 ;       |HEX_DISP:inst1|                    ; 17 (17)             ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|HEX_DISP_6:inst9|HEX_DISP:inst1                                                                                                ; HEX_DISP            ; work         ;
@@ -299,8 +299,8 @@ https://fpgasoftware.intel.com/eula.
 ;    |I2C_INTERFACE:inst13|                 ; 224 (66)            ; 125 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|I2C_INTERFACE:inst13                                                                                                           ; I2C_INTERFACE       ; work         ;
 ;       |i2c_ctrl:inst14|                   ; 58 (58)             ; 70 (70)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14                                                                                           ; i2c_ctrl            ; work         ;
 ;       |i2c_master:inst|                   ; 100 (100)           ; 55 (55)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_master:inst                                                                                           ; i2c_master          ; work         ;
-;    |IO_DECODER:inst3|                     ; 26 (26)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|IO_DECODER:inst3                                                                                                               ; IO_DECODER          ; work         ;
-;    |Music_Gen:inst15|                     ; 99 (99)             ; 49 (49)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|Music_Gen:inst15                                                                                                               ; Music_Gen           ; work         ;
+;    |IO_DECODER:inst3|                     ; 25 (25)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|IO_DECODER:inst3                                                                                                               ; IO_DECODER          ; work         ;
+;    |Music_Gen:inst15|                     ; 112 (112)           ; 52 (52)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|Music_Gen:inst15                                                                                                               ; Music_Gen           ; work         ;
 ;    |PLL_main:inst1|                       ; 0 (0)               ; 1 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|PLL_main:inst1                                                                                                                 ; PLL_main            ; work         ;
 ;       |altpll:altpll_component|           ; 0 (0)               ; 1 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|PLL_main:inst1|altpll:altpll_component                                                                                         ; altpll              ; work         ;
 ;          |PLL_main_altpll:auto_generated| ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|PLL_main:inst1|altpll:altpll_component|PLL_main_altpll:auto_generated                                                          ; PLL_main_altpll     ; work         ;
@@ -309,9 +309,9 @@ https://fpgasoftware.intel.com/eula.
 ;          |altsyncram_scr3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 32768       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst|altsyncram:altsyncram_component|altsyncram_scr3:auto_generated                                                      ; altsyncram_scr3     ; work         ;
 ;       |lpm_clshift:shifter|               ; 83 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter                                                                                                 ; lpm_clshift         ; work         ;
 ;          |lpm_clshift_fuc:auto_generated| ; 83 (83)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SCOMP:inst|lpm_clshift:shifter|lpm_clshift_fuc:auto_generated                                                                  ; lpm_clshift_fuc     ; work         ;
-;    |SQ_GEN:inst11|                        ; 11 (11)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SQ_GEN:inst11                                                                                                                  ; SQ_GEN              ; work         ;
-;    |TIMER:inst4|                          ; 18 (18)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|TIMER:inst4                                                                                                                    ; TIMER               ; work         ;
-;    |clk_div:inst5|                        ; 49 (49)             ; 40 (40)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|clk_div:inst5                                                                                                                  ; clk_div             ; work         ;
+;    |SQ_GEN:inst11|                        ; 10 (10)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|SQ_GEN:inst11                                                                                                                  ; SQ_GEN              ; work         ;
+;    |TIMER:inst4|                          ; 19 (19)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|TIMER:inst4                                                                                                                    ; TIMER               ; work         ;
+;    |clk_div:inst5|                        ; 48 (48)             ; 40 (40)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SCOMP_System|clk_div:inst5                                                                                                                  ; clk_div             ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -407,17 +407,18 @@ Encoding Type:  One-Hot
 +----------------+------------+----------------+----------------+----------+----------+----------------+---------------+---------------+-------------+-------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                     ;
-+-----------------------------------------------+----------------------------------------+
-; Register name                                 ; Reason for Removal                     ;
-+-----------------------------------------------+----------------------------------------+
-; DIG_IN:inst7|B_DI[10..15]                     ; Stuck at GND due to stuck port data_in ;
-; I2C_INTERFACE:inst13|i2c_master:inst|scl_clk  ; Stuck at GND due to stuck port data_in ;
-; I2C_INTERFACE:inst13|i2c_master:inst|count[2] ; Stuck at GND due to stuck port data_in ;
-; SCOMP:inst|state.ex_nop                       ; Lost fanout                            ;
-; Total Number of Removed Registers = 9         ;                                        ;
-+-----------------------------------------------+----------------------------------------+
++------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                       ;
++-----------------------------------------------+------------------------------------------+
+; Register name                                 ; Reason for Removal                       ;
++-----------------------------------------------+------------------------------------------+
+; DIG_IN:inst7|B_DI[10..15]                     ; Stuck at GND due to stuck port data_in   ;
+; I2C_INTERFACE:inst13|i2c_master:inst|scl_clk  ; Stuck at GND due to stuck port data_in   ;
+; I2C_INTERFACE:inst13|i2c_master:inst|count[2] ; Stuck at GND due to stuck port data_in   ;
+; SCOMP:inst|state.ex_nop                       ; Lost fanout                              ;
+; Music_Gen:inst15|COMPARE[25]                  ; Merged with Music_Gen:inst15|COMPARE[24] ;
+; Total Number of Removed Registers = 10        ;                                          ;
++-----------------------------------------------+------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -425,10 +426,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 474   ;
+; Total registers                              ; 477   ;
 ; Number of registers using Synchronous Clear  ; 34    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 179   ;
+; Number of registers using Asynchronous Clear ; 180   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 217   ;
 ; Number of registers using Preset             ; 0     ;
@@ -453,14 +454,14 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
-; 3:1                ; 99 bits   ; 198 LEs       ; 99 LEs               ; 99 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|PC_stack[6][0]                         ;
+; 3:1                ; 99 bits   ; 198 LEs       ; 99 LEs               ; 99 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|PC_stack[3][0]                         ;
 ; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_master:inst|addr_rw[0]   ;
-; 7:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14|tx_byte[2]   ;
-; 11:1               ; 11 bits   ; 77 LEs        ; 22 LEs               ; 55 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|PC[1]                                  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_master:inst|bit_cnt[0]   ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[11] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[7]  ;
-; 12:1               ; 16 bits   ; 128 LEs       ; 96 LEs               ; 32 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|AC[1]                                  ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14|tx_byte[7]   ;
+; 11:1               ; 11 bits   ; 77 LEs        ; 22 LEs               ; 55 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|PC[10]                                 ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_master:inst|bit_cnt[2]   ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[13] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_out[0]  ;
+; 12:1               ; 16 bits   ; 128 LEs       ; 96 LEs               ; 32 LEs                 ; Yes        ; |SCOMP_System|SCOMP:inst|AC[15]                                 ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |SCOMP_System|I2C_INTERFACE:inst13|i2c_master:inst|count        ;
 ; 12:1               ; 16 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; No         ; |SCOMP_System|SCOMP:inst|Add1                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
@@ -970,14 +971,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------+----------------+---------------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                              ;
 +------------------------+----------------+---------------------------------------------------+
-; LPM_WIDTHN             ; 24             ; Signed Integer                                    ;
-; LPM_WIDTHD             ; 12             ; Signed Integer                                    ;
+; LPM_WIDTHN             ; 26             ; Signed Integer                                    ;
+; LPM_WIDTHD             ; 13             ; Signed Integer                                    ;
 ; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                           ;
 ; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                           ;
 ; LPM_PIPELINE           ; 0              ; Untyped                                           ;
 ; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                           ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                           ;
-; CBXI_PARAMETER         ; lpm_divide_ldp ; Untyped                                           ;
+; MAXIMIZE_SPEED         ; 6              ; Untyped                                           ;
+; CBXI_PARAMETER         ; lpm_divide_v0r ; Untyped                                           ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                                           ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                           ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                        ;
@@ -1031,28 +1032,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 76                          ;
-; cycloneiii_ff         ; 474                         ;
-;     CLR               ; 168                         ;
+; cycloneiii_ff         ; 477                         ;
+;     CLR               ; 169                         ;
 ;     ENA               ; 206                         ;
 ;     ENA CLR           ; 11                          ;
 ;     SCLR              ; 34                          ;
-;     plain             ; 55                          ;
+;     plain             ; 57                          ;
 ; cycloneiii_io_obuf    ; 2                           ;
-; cycloneiii_lcell_comb ; 1465                        ;
-;     arith             ; 338                         ;
-;         2 data inputs ; 106                         ;
-;         3 data inputs ; 232                         ;
-;     normal            ; 1127                        ;
-;         0 data inputs ; 22                          ;
-;         1 data inputs ; 28                          ;
-;         2 data inputs ; 84                          ;
-;         3 data inputs ; 414                         ;
-;         4 data inputs ; 579                         ;
+; cycloneiii_lcell_comb ; 1555                        ;
+;     arith             ; 355                         ;
+;         2 data inputs ; 109                         ;
+;         3 data inputs ; 246                         ;
+;     normal            ; 1200                        ;
+;         0 data inputs ; 24                          ;
+;         1 data inputs ; 29                          ;
+;         2 data inputs ; 55                          ;
+;         3 data inputs ; 451                         ;
+;         4 data inputs ; 641                         ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 16                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 70.60                       ;
-; Average LUT depth     ; 26.17                       ;
+; Max LUT depth         ; 78.30                       ;
+; Average LUT depth     ; 31.86                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1071,62 +1072,62 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Sun Nov 15 23:57:09 2020
+    Info: Processing started: Mon Nov 16 22:45:56 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SCOMP -c SCOMP
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file i2c_interface.bdf
     Info (12023): Found entity 1: I2C_INTERFACE
 Info (12021): Found 2 design units, including 1 entities, in source file i2c_master.vhd
-    Info (12022): Found design unit 1: i2c_master-logic File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/i2c_master.vhd Line: 49
-    Info (12023): Found entity 1: i2c_master File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/i2c_master.vhd Line: 31
+    Info (12022): Found design unit 1: i2c_master-logic File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/i2c_master.vhd Line: 49
+    Info (12023): Found entity 1: i2c_master File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/i2c_master.vhd Line: 31
 Info (12021): Found 2 design units, including 1 entities, in source file i2c_ctrl.vhd
-    Info (12022): Found design unit 1: i2c_ctrl-main File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/i2c_ctrl.vhd Line: 32
-    Info (12023): Found entity 1: i2c_ctrl File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/i2c_ctrl.vhd Line: 11
+    Info (12022): Found design unit 1: i2c_ctrl-main File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/i2c_ctrl.vhd Line: 32
+    Info (12023): Found entity 1: i2c_ctrl File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/i2c_ctrl.vhd Line: 11
 Info (12021): Found 2 design units, including 1 entities, in source file hex_disp.vhd
-    Info (12022): Found design unit 1: HEX_DISP-a File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/HEX_DISP.vhd Line: 17
-    Info (12023): Found entity 1: HEX_DISP File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/HEX_DISP.vhd Line: 9
+    Info (12022): Found design unit 1: HEX_DISP-a File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/HEX_DISP.vhd Line: 17
+    Info (12023): Found entity 1: HEX_DISP File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/HEX_DISP.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file dig_out.vhd
-    Info (12022): Found design unit 1: DIG_OUT-a File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/DIG_OUT.vhd Line: 26
-    Info (12023): Found entity 1: DIG_OUT File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/DIG_OUT.vhd Line: 16
+    Info (12022): Found design unit 1: DIG_OUT-a File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/DIG_OUT.vhd Line: 26
+    Info (12023): Found entity 1: DIG_OUT File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/DIG_OUT.vhd Line: 16
 Info (12021): Found 2 design units, including 1 entities, in source file dig_in.vhd
-    Info (12022): Found design unit 1: DIG_IN-a File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/DIG_IN.vhd Line: 18
-    Info (12023): Found entity 1: DIG_IN File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/DIG_IN.vhd Line: 10
+    Info (12022): Found design unit 1: DIG_IN-a File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/DIG_IN.vhd Line: 18
+    Info (12023): Found entity 1: DIG_IN File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/DIG_IN.vhd Line: 10
 Info (12021): Found 2 design units, including 1 entities, in source file clk_div.vhd
-    Info (12022): Found design unit 1: clk_div-a File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/clk_div.vhd Line: 21
-    Info (12023): Found entity 1: clk_div File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/clk_div.vhd Line: 6
+    Info (12022): Found design unit 1: clk_div-a File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/clk_div.vhd Line: 21
+    Info (12023): Found entity 1: clk_div File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/clk_div.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file timer.vhd
-    Info (12022): Found design unit 1: TIMER-a File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/TIMER.vhd Line: 27
-    Info (12023): Found entity 1: TIMER File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/TIMER.vhd Line: 17
+    Info (12022): Found design unit 1: TIMER-a File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/TIMER.vhd Line: 27
+    Info (12023): Found entity 1: TIMER File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/TIMER.vhd Line: 17
 Info (12021): Found 2 design units, including 1 entities, in source file io_decoder.vhd
-    Info (12022): Found design unit 1: IO_DECODER-a File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/IO_DECODER.vhd Line: 34
-    Info (12023): Found entity 1: IO_DECODER File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/IO_DECODER.vhd Line: 9
+    Info (12022): Found design unit 1: IO_DECODER-a File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/IO_DECODER.vhd Line: 34
+    Info (12023): Found entity 1: IO_DECODER File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/IO_DECODER.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file scomp.vhd
-    Info (12022): Found design unit 1: SCOMP-a File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/SCOMP.vhd Line: 33
-    Info (12023): Found entity 1: SCOMP File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/SCOMP.vhd Line: 16
+    Info (12022): Found design unit 1: SCOMP-a File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/SCOMP.vhd Line: 33
+    Info (12023): Found entity 1: SCOMP File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/SCOMP.vhd Line: 16
 Info (12021): Found 1 design units, including 1 entities, in source file scomp_system.bdf
     Info (12023): Found entity 1: SCOMP_System
 Info (12021): Found 2 design units, including 1 entities, in source file pll_main.vhd
-    Info (12022): Found design unit 1: pll_main-SYN File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/PLL_main.vhd Line: 54
-    Info (12023): Found entity 1: PLL_main File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/PLL_main.vhd Line: 43
+    Info (12022): Found design unit 1: pll_main-SYN File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/PLL_main.vhd Line: 54
+    Info (12023): Found entity 1: PLL_main File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/PLL_main.vhd Line: 43
 Info (12021): Found 1 design units, including 1 entities, in source file hex_disp_6.bdf
     Info (12023): Found entity 1: HEX_DISP_6
 Info (12021): Found 1 design units, including 1 entities, in source file dps.bdf
     Info (12023): Found entity 1: Dps
 Info (12021): Found 2 design units, including 1 entities, in source file musicgen.vhd
-    Info (12022): Found design unit 1: Music_Gen-a File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/MusicGen.vhd Line: 28
-    Info (12023): Found entity 1: Music_Gen File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/MusicGen.vhd Line: 14
+    Info (12022): Found design unit 1: Music_Gen-a File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/MusicGen.vhd Line: 28
+    Info (12023): Found entity 1: Music_Gen File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/MusicGen.vhd Line: 14
 Info (12021): Found 2 design units, including 1 entities, in source file divider.vhd
-    Info (12022): Found design unit 1: divider-SYN File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/Divider.vhd Line: 54
-    Info (12023): Found entity 1: Divider File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/Divider.vhd Line: 43
+    Info (12022): Found design unit 1: divider-SYN File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/Divider.vhd Line: 54
+    Info (12023): Found entity 1: Divider File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/Divider.vhd Line: 43
 Info (12127): Elaborating entity "SCOMP_System" for the top level hierarchy
 Info (12128): Elaborating entity "I2C_INTERFACE" for hierarchy "I2C_INTERFACE:inst13"
 Info (12128): Elaborating entity "i2c_master" for hierarchy "I2C_INTERFACE:inst13|i2c_master:inst"
 Info (12128): Elaborating entity "i2c_ctrl" for hierarchy "I2C_INTERFACE:inst13|i2c_ctrl:inst14"
 Info (12128): Elaborating entity "clk_div" for hierarchy "clk_div:inst5"
 Info (12128): Elaborating entity "PLL_main" for hierarchy "PLL_main:inst1"
-Info (12128): Elaborating entity "altpll" for hierarchy "PLL_main:inst1|altpll:altpll_component" File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/PLL_main.vhd Line: 141
-Info (12130): Elaborated megafunction instantiation "PLL_main:inst1|altpll:altpll_component" File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/PLL_main.vhd Line: 141
-Info (12133): Instantiated megafunction "PLL_main:inst1|altpll:altpll_component" with the following parameter: File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/PLL_main.vhd Line: 141
+Info (12128): Elaborating entity "altpll" for hierarchy "PLL_main:inst1|altpll:altpll_component" File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/PLL_main.vhd Line: 141
+Info (12130): Elaborated megafunction instantiation "PLL_main:inst1|altpll:altpll_component" File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/PLL_main.vhd Line: 141
+Info (12133): Instantiated megafunction "PLL_main:inst1|altpll:altpll_component" with the following parameter: File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/PLL_main.vhd Line: 141
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "5"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -1183,12 +1184,12 @@ Info (12133): Instantiated megafunction "PLL_main:inst1|altpll:altpll_component"
     Info (12134): Parameter "self_reset_on_loss_lock" = "OFF"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_main_altpll.v
-    Info (12023): Found entity 1: PLL_main_altpll File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/pll_main_altpll.v Line: 31
-Info (12128): Elaborating entity "PLL_main_altpll" for hierarchy "PLL_main:inst1|altpll:altpll_component|PLL_main_altpll:auto_generated" File: c:/users/broughton/desktop/quartus/libraries/megafunctions/altpll.tdf Line: 898
+    Info (12023): Found entity 1: PLL_main_altpll File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/db/pll_main_altpll.v Line: 31
+Info (12128): Elaborating entity "PLL_main_altpll" for hierarchy "PLL_main:inst1|altpll:altpll_component|PLL_main_altpll:auto_generated" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
 Info (12128): Elaborating entity "SCOMP" for hierarchy "SCOMP:inst"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "SCOMP:inst|altsyncram:altsyncram_component" File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/SCOMP.vhd Line: 61
-Info (12130): Elaborated megafunction instantiation "SCOMP:inst|altsyncram:altsyncram_component" File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/SCOMP.vhd Line: 61
-Info (12133): Instantiated megafunction "SCOMP:inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/SCOMP.vhd Line: 61
+Info (12128): Elaborating entity "altsyncram" for hierarchy "SCOMP:inst|altsyncram:altsyncram_component" File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/SCOMP.vhd Line: 61
+Info (12130): Elaborated megafunction instantiation "SCOMP:inst|altsyncram:altsyncram_component" File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/SCOMP.vhd Line: 61
+Info (12133): Instantiated megafunction "SCOMP:inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/SCOMP.vhd Line: 61
     Info (12134): Parameter "address_aclr_a" = "UNUSED"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -1240,60 +1241,63 @@ Info (12133): Instantiated megafunction "SCOMP:inst|altsyncram:altsyncram_compon
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_scr3.tdf
-    Info (12023): Found entity 1: altsyncram_scr3 File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/altsyncram_scr3.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_scr3" for hierarchy "SCOMP:inst|altsyncram:altsyncram_component|altsyncram_scr3:auto_generated" File: c:/users/broughton/desktop/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "LPM_CLSHIFT" for hierarchy "SCOMP:inst|LPM_CLSHIFT:shifter" File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/SCOMP.vhd Line: 88
-Info (12130): Elaborated megafunction instantiation "SCOMP:inst|LPM_CLSHIFT:shifter" File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/SCOMP.vhd Line: 88
-Info (12133): Instantiated megafunction "SCOMP:inst|LPM_CLSHIFT:shifter" with the following parameter: File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/SCOMP.vhd Line: 88
+    Info (12023): Found entity 1: altsyncram_scr3 File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/db/altsyncram_scr3.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_scr3" for hierarchy "SCOMP:inst|altsyncram:altsyncram_component|altsyncram_scr3:auto_generated" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Warning (113031): 3 out of 2048 addresses are reinitialized. The latest initialized data will replace the existing data. There are 3 warnings found, and 3 warnings are reported. File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/SqGen.mif Line: 1
+    Warning (113030): Memory Initialization File address 0 is reinitialized File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/ Line: 13
+    Warning (113030): Memory Initialization File address 1 is reinitialized File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/ Line: 14
+    Warning (113030): Memory Initialization File address 2 is reinitialized File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/ Line: 15
+Info (12128): Elaborating entity "LPM_CLSHIFT" for hierarchy "SCOMP:inst|LPM_CLSHIFT:shifter" File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/SCOMP.vhd Line: 88
+Info (12130): Elaborated megafunction instantiation "SCOMP:inst|LPM_CLSHIFT:shifter" File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/SCOMP.vhd Line: 88
+Info (12133): Instantiated megafunction "SCOMP:inst|LPM_CLSHIFT:shifter" with the following parameter: File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/SCOMP.vhd Line: 88
     Info (12134): Parameter "LPM_WIDTH" = "16"
     Info (12134): Parameter "LPM_WIDTHDIST" = "4"
     Info (12134): Parameter "LPM_SHIFTTYPE" = "arithmetic"
     Info (12134): Parameter "LPM_TYPE" = "LPM_CLSHIFT"
     Info (12134): Parameter "LPM_HINT" = "UNUSED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_clshift_fuc.tdf
-    Info (12023): Found entity 1: lpm_clshift_fuc File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/lpm_clshift_fuc.tdf Line: 23
-Info (12128): Elaborating entity "lpm_clshift_fuc" for hierarchy "SCOMP:inst|LPM_CLSHIFT:shifter|lpm_clshift_fuc:auto_generated" File: c:/users/broughton/desktop/quartus/libraries/megafunctions/lpm_clshift.tdf Line: 54
-Info (12128): Elaborating entity "LPM_BUSTRI" for hierarchy "SCOMP:inst|LPM_BUSTRI:io_bus" File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/SCOMP.vhd Line: 115
-Info (12130): Elaborated megafunction instantiation "SCOMP:inst|LPM_BUSTRI:io_bus" File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/SCOMP.vhd Line: 115
-Info (12133): Instantiated megafunction "SCOMP:inst|LPM_BUSTRI:io_bus" with the following parameter: File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/SCOMP.vhd Line: 115
+    Info (12023): Found entity 1: lpm_clshift_fuc File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/db/lpm_clshift_fuc.tdf Line: 23
+Info (12128): Elaborating entity "lpm_clshift_fuc" for hierarchy "SCOMP:inst|LPM_CLSHIFT:shifter|lpm_clshift_fuc:auto_generated" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_clshift.tdf Line: 54
+Info (12128): Elaborating entity "LPM_BUSTRI" for hierarchy "SCOMP:inst|LPM_BUSTRI:io_bus" File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/SCOMP.vhd Line: 115
+Info (12130): Elaborated megafunction instantiation "SCOMP:inst|LPM_BUSTRI:io_bus" File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/SCOMP.vhd Line: 115
+Info (12133): Instantiated megafunction "SCOMP:inst|LPM_BUSTRI:io_bus" with the following parameter: File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/SCOMP.vhd Line: 115
     Info (12134): Parameter "LPM_WIDTH" = "16"
     Info (12134): Parameter "LPM_TYPE" = "LPM_BUSTRI"
     Info (12134): Parameter "LPM_HINT" = "UNUSED"
 Info (12128): Elaborating entity "TIMER" for hierarchy "TIMER:inst4"
-Warning (10631): VHDL Process Statement warning at TIMER.vhd(59): inferring latch(es) for signal or variable "IO_COUNT", which holds its previous value in one or more paths through the process File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/TIMER.vhd Line: 59
+Warning (10631): VHDL Process Statement warning at TIMER.vhd(59): inferring latch(es) for signal or variable "IO_COUNT", which holds its previous value in one or more paths through the process File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/TIMER.vhd Line: 59
 Info (12128): Elaborating entity "IO_DECODER" for hierarchy "IO_DECODER:inst3"
 Info (12128): Elaborating entity "DIG_IN" for hierarchy "DIG_IN:inst7"
 Warning (12125): Using design file sq_gen.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: SQ_GEN-a File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/sq_gen.vhd Line: 26
-    Info (12023): Found entity 1: SQ_GEN File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/sq_gen.vhd Line: 16
+    Info (12022): Found design unit 1: SQ_GEN-a File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/sq_gen.vhd Line: 26
+    Info (12023): Found entity 1: SQ_GEN File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/sq_gen.vhd Line: 16
 Info (12128): Elaborating entity "SQ_GEN" for hierarchy "SQ_GEN:inst11"
 Info (12128): Elaborating entity "Music_Gen" for hierarchy "Music_Gen:inst15"
-Warning (10492): VHDL Process Statement warning at MusicGen.vhd(44): signal "IO_DATA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/MusicGen.vhd Line: 44
 Info (12128): Elaborating entity "Divider" for hierarchy "Divider:inst17"
-Info (12128): Elaborating entity "lpm_divide" for hierarchy "Divider:inst17|lpm_divide:LPM_DIVIDE_component" File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/Divider.vhd Line: 82
-Info (12130): Elaborated megafunction instantiation "Divider:inst17|lpm_divide:LPM_DIVIDE_component" File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/Divider.vhd Line: 82
-Info (12133): Instantiated megafunction "Divider:inst17|lpm_divide:LPM_DIVIDE_component" with the following parameter: File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/Divider.vhd Line: 82
+Info (12128): Elaborating entity "lpm_divide" for hierarchy "Divider:inst17|lpm_divide:LPM_DIVIDE_component" File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/Divider.vhd Line: 82
+Info (12130): Elaborated megafunction instantiation "Divider:inst17|lpm_divide:LPM_DIVIDE_component" File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/Divider.vhd Line: 82
+Info (12133): Instantiated megafunction "Divider:inst17|lpm_divide:LPM_DIVIDE_component" with the following parameter: File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/Divider.vhd Line: 82
     Info (12134): Parameter "lpm_drepresentation" = "UNSIGNED"
-    Info (12134): Parameter "lpm_hint" = "LPM_REMAINDERPOSITIVE=TRUE"
+    Info (12134): Parameter "lpm_hint" = "MAXIMIZE_SPEED=6,LPM_REMAINDERPOSITIVE=TRUE"
     Info (12134): Parameter "lpm_nrepresentation" = "UNSIGNED"
     Info (12134): Parameter "lpm_type" = "LPM_DIVIDE"
-    Info (12134): Parameter "lpm_widthd" = "12"
-    Info (12134): Parameter "lpm_widthn" = "24"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ldp.tdf
-    Info (12023): Found entity 1: lpm_divide_ldp File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/lpm_divide_ldp.tdf Line: 25
-Info (12128): Elaborating entity "lpm_divide_ldp" for hierarchy "Divider:inst17|lpm_divide:LPM_DIVIDE_component|lpm_divide_ldp:auto_generated" File: c:/users/broughton/desktop/quartus/libraries/megafunctions/lpm_divide.tdf Line: 148
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_8nh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_8nh File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/sign_div_unsign_8nh.tdf Line: 25
-Info (12128): Elaborating entity "sign_div_unsign_8nh" for hierarchy "Divider:inst17|lpm_divide:LPM_DIVIDE_component|lpm_divide_ldp:auto_generated|sign_div_unsign_8nh:divider" File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/lpm_divide_ldp.tdf Line: 33
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_qke.tdf
-    Info (12023): Found entity 1: alt_u_div_qke File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/alt_u_div_qke.tdf Line: 27
-Info (12128): Elaborating entity "alt_u_div_qke" for hierarchy "Divider:inst17|lpm_divide:LPM_DIVIDE_component|lpm_divide_ldp:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_qke:divider" File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/sign_div_unsign_8nh.tdf Line: 33
+    Info (12134): Parameter "lpm_widthd" = "13"
+    Info (12134): Parameter "lpm_widthn" = "26"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_v0r.tdf
+    Info (12023): Found entity 1: lpm_divide_v0r File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/db/lpm_divide_v0r.tdf Line: 25
+Info (12128): Elaborating entity "lpm_divide_v0r" for hierarchy "Divider:inst17|lpm_divide:LPM_DIVIDE_component|lpm_divide_v0r:auto_generated" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_divide.tdf Line: 148
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_dnh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_dnh File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/db/sign_div_unsign_dnh.tdf Line: 25
+Info (12128): Elaborating entity "sign_div_unsign_dnh" for hierarchy "Divider:inst17|lpm_divide:LPM_DIVIDE_component|lpm_divide_v0r:auto_generated|sign_div_unsign_dnh:divider" File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/db/lpm_divide_v0r.tdf Line: 33
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_1le.tdf
+    Info (12023): Found entity 1: alt_u_div_1le File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/db/alt_u_div_1le.tdf Line: 27
+Info (12128): Elaborating entity "alt_u_div_1le" for hierarchy "Divider:inst17|lpm_divide:LPM_DIVIDE_component|lpm_divide_v0r:auto_generated|sign_div_unsign_dnh:divider|alt_u_div_1le:divider" File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/db/sign_div_unsign_dnh.tdf Line: 33
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_t3c.tdf
-    Info (12023): Found entity 1: add_sub_t3c File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/add_sub_t3c.tdf Line: 23
-Info (12128): Elaborating entity "add_sub_t3c" for hierarchy "Divider:inst17|lpm_divide:LPM_DIVIDE_component|lpm_divide_ldp:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_qke:divider|add_sub_t3c:add_sub_0" File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/alt_u_div_qke.tdf Line: 35
+    Info (12023): Found entity 1: add_sub_t3c File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/db/add_sub_t3c.tdf Line: 23
+Info (12128): Elaborating entity "add_sub_t3c" for hierarchy "Divider:inst17|lpm_divide:LPM_DIVIDE_component|lpm_divide_v0r:auto_generated|sign_div_unsign_dnh:divider|alt_u_div_1le:divider|add_sub_t3c:add_sub_0" File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/db/alt_u_div_1le.tdf Line: 35
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_u3c.tdf
-    Info (12023): Found entity 1: add_sub_u3c File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/add_sub_u3c.tdf Line: 23
-Info (12128): Elaborating entity "add_sub_u3c" for hierarchy "Divider:inst17|lpm_divide:LPM_DIVIDE_component|lpm_divide_ldp:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_qke:divider|add_sub_u3c:add_sub_1" File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/db/alt_u_div_qke.tdf Line: 36
+    Info (12023): Found entity 1: add_sub_u3c File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/db/add_sub_u3c.tdf Line: 23
+Info (12128): Elaborating entity "add_sub_u3c" for hierarchy "Divider:inst17|lpm_divide:LPM_DIVIDE_component|lpm_divide_v0r:auto_generated|sign_div_unsign_dnh:divider|alt_u_div_1le:divider|add_sub_u3c:add_sub_1" File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/db/alt_u_div_1le.tdf Line: 36
 Info (12128): Elaborating entity "Dps" for hierarchy "Dps:inst10"
 Info (12128): Elaborating entity "HEX_DISP_6" for hierarchy "HEX_DISP_6:inst9"
 Warning (275009): Pin "hex_val1" not connected
@@ -1310,13 +1314,13 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[8]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[8]" into an OR gate
     Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[7]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[7]" into an OR gate
     Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[6]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[6]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[11]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[11]" into an OR gate
     Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[10]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[10]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[13]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[13]" into an OR gate
     Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[12]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[12]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[11]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[11]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[13]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[13]" into an OR gate
     Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[14]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[14]" into an OR gate
     Warning (13047): Converted the fan-out from the tri-state buffer "I2C_INTERFACE:inst13|inst1[15]" to the node "I2C_INTERFACE:inst13|i2c_ctrl:inst14|data_in[15]" into an OR gate
-Info (13000): Registers with preset signals will power-up high File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/i2c_master.vhd Line: 57
+Info (13000): Registers with preset signals will power-up high File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/i2c_master.vhd Line: 57
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "GSENSOR_CS_n" is stuck at VCC
@@ -1325,17 +1329,17 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1707 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1799 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 62 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 1614 logic cells
+    Info (21061): Implemented 1706 logic cells
     Info (21064): Implemented 16 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
-    Info: Peak virtual memory: 4827 megabytes
-    Info: Processing ended: Sun Nov 15 23:57:22 2020
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:25
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
+    Info: Peak virtual memory: 4833 megabytes
+    Info: Processing ended: Mon Nov 16 22:46:13 2020
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:33
 
 

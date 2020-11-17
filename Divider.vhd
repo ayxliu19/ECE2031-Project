@@ -43,18 +43,18 @@ USE lpm.all;
 ENTITY Divider IS
 	PORT
 	(
-		denom		: IN STD_LOGIC_VECTOR (11 DOWNTO 0);
-		numer		: IN STD_LOGIC_VECTOR (23 DOWNTO 0);
-		quotient		: OUT STD_LOGIC_VECTOR (23 DOWNTO 0);
-		remain		: OUT STD_LOGIC_VECTOR (11 DOWNTO 0)
+		denom		: IN STD_LOGIC_VECTOR (12 DOWNTO 0);
+		numer		: IN STD_LOGIC_VECTOR (25 DOWNTO 0);
+		quotient		: OUT STD_LOGIC_VECTOR (25 DOWNTO 0);
+		remain		: OUT STD_LOGIC_VECTOR (12 DOWNTO 0)
 	);
 END Divider;
 
 
 ARCHITECTURE SYN OF divider IS
 
-	SIGNAL sub_wire0	: STD_LOGIC_VECTOR (23 DOWNTO 0);
-	SIGNAL sub_wire1	: STD_LOGIC_VECTOR (11 DOWNTO 0);
+	SIGNAL sub_wire0	: STD_LOGIC_VECTOR (25 DOWNTO 0);
+	SIGNAL sub_wire1	: STD_LOGIC_VECTOR (12 DOWNTO 0);
 
 
 
@@ -68,25 +68,25 @@ ARCHITECTURE SYN OF divider IS
 		lpm_widthn		: NATURAL
 	);
 	PORT (
-			denom	: IN STD_LOGIC_VECTOR (11 DOWNTO 0);
-			numer	: IN STD_LOGIC_VECTOR (23 DOWNTO 0);
-			quotient	: OUT STD_LOGIC_VECTOR (23 DOWNTO 0);
-			remain	: OUT STD_LOGIC_VECTOR (11 DOWNTO 0)
+			denom	: IN STD_LOGIC_VECTOR (12 DOWNTO 0);
+			numer	: IN STD_LOGIC_VECTOR (25 DOWNTO 0);
+			quotient	: OUT STD_LOGIC_VECTOR (25 DOWNTO 0);
+			remain	: OUT STD_LOGIC_VECTOR (12 DOWNTO 0)
 	);
 	END COMPONENT;
 
 BEGIN
-	quotient    <= sub_wire0(23 DOWNTO 0);
-	remain    <= sub_wire1(11 DOWNTO 0);
+	quotient    <= sub_wire0(25 DOWNTO 0);
+	remain    <= sub_wire1(12 DOWNTO 0);
 
 	LPM_DIVIDE_component : LPM_DIVIDE
 	GENERIC MAP (
 		lpm_drepresentation => "UNSIGNED",
-		lpm_hint => "LPM_REMAINDERPOSITIVE=TRUE",
+		lpm_hint => "MAXIMIZE_SPEED=6,LPM_REMAINDERPOSITIVE=TRUE",
 		lpm_nrepresentation => "UNSIGNED",
 		lpm_type => "LPM_DIVIDE",
-		lpm_widthd => 12,
-		lpm_widthn => 24
+		lpm_widthd => 13,
+		lpm_widthn => 26
 	)
 	PORT MAP (
 		denom => denom,
@@ -104,26 +104,26 @@ END SYN;
 -- ============================================================
 -- Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "MAX 10"
 -- Retrieval info: PRIVATE: PRIVATE_LPM_REMAINDERPOSITIVE STRING "TRUE"
--- Retrieval info: PRIVATE: PRIVATE_MAXIMIZE_SPEED NUMERIC "-1"
+-- Retrieval info: PRIVATE: PRIVATE_MAXIMIZE_SPEED NUMERIC "6"
 -- Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
 -- Retrieval info: PRIVATE: USING_PIPELINE NUMERIC "0"
 -- Retrieval info: PRIVATE: VERSION_NUMBER NUMERIC "2"
 -- Retrieval info: PRIVATE: new_diagram STRING "1"
 -- Retrieval info: LIBRARY: lpm lpm.lpm_components.all
 -- Retrieval info: CONSTANT: LPM_DREPRESENTATION STRING "UNSIGNED"
--- Retrieval info: CONSTANT: LPM_HINT STRING "LPM_REMAINDERPOSITIVE=TRUE"
+-- Retrieval info: CONSTANT: LPM_HINT STRING "MAXIMIZE_SPEED=6,LPM_REMAINDERPOSITIVE=TRUE"
 -- Retrieval info: CONSTANT: LPM_NREPRESENTATION STRING "UNSIGNED"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_DIVIDE"
--- Retrieval info: CONSTANT: LPM_WIDTHD NUMERIC "12"
--- Retrieval info: CONSTANT: LPM_WIDTHN NUMERIC "24"
--- Retrieval info: USED_PORT: denom 0 0 12 0 INPUT NODEFVAL "denom[11..0]"
--- Retrieval info: USED_PORT: numer 0 0 24 0 INPUT NODEFVAL "numer[23..0]"
--- Retrieval info: USED_PORT: quotient 0 0 24 0 OUTPUT NODEFVAL "quotient[23..0]"
--- Retrieval info: USED_PORT: remain 0 0 12 0 OUTPUT NODEFVAL "remain[11..0]"
--- Retrieval info: CONNECT: @denom 0 0 12 0 denom 0 0 12 0
--- Retrieval info: CONNECT: @numer 0 0 24 0 numer 0 0 24 0
--- Retrieval info: CONNECT: quotient 0 0 24 0 @quotient 0 0 24 0
--- Retrieval info: CONNECT: remain 0 0 12 0 @remain 0 0 12 0
+-- Retrieval info: CONSTANT: LPM_WIDTHD NUMERIC "13"
+-- Retrieval info: CONSTANT: LPM_WIDTHN NUMERIC "26"
+-- Retrieval info: USED_PORT: denom 0 0 13 0 INPUT NODEFVAL "denom[12..0]"
+-- Retrieval info: USED_PORT: numer 0 0 26 0 INPUT NODEFVAL "numer[25..0]"
+-- Retrieval info: USED_PORT: quotient 0 0 26 0 OUTPUT NODEFVAL "quotient[25..0]"
+-- Retrieval info: USED_PORT: remain 0 0 13 0 OUTPUT NODEFVAL "remain[12..0]"
+-- Retrieval info: CONNECT: @denom 0 0 13 0 denom 0 0 13 0
+-- Retrieval info: CONNECT: @numer 0 0 26 0 numer 0 0 26 0
+-- Retrieval info: CONNECT: quotient 0 0 26 0 @quotient 0 0 26 0
+-- Retrieval info: CONNECT: remain 0 0 13 0 @remain 0 0 13 0
 -- Retrieval info: GEN_FILE: TYPE_NORMAL Divider.vhd TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL Divider.inc FALSE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL Divider.cmp TRUE

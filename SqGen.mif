@@ -10,7 +10,8 @@ CONTENT
   BEGIN
     [000..7FF] : 0000;  -- Default to NOP
 
-           000 : BEE0;  --   LOADI 1760
-           001 : 9820;  --   OUT  MusicGen
-           002 : 2802;  -- Here: jump Here
+           000 : 9000;  --   in Switches
+           001 : 6002;  --   shift 2
+           002 : 9820;  --   OUT  MusicGen
+           003 : 2800;  -- 	jump Loop
   END;

@@ -1,5 +1,5 @@
 MIF/HEX Update report for SCOMP
-Sun Nov 15 23:54:27 2020
+Mon Nov 16 22:55:53 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; MIF/HEX Update Summary                                        ;
 +-----------------------+---------------------------------------+
-; MIF/HEX Update Status ; Successful - Sun Nov 15 23:54:27 2020 ;
+; MIF/HEX Update Status ; Successful - Mon Nov 16 22:55:53 2020 ;
 ; Revision Name         ; SCOMP                                 ;
 ; Top-level Entity Name ; SCOMP_System                          ;
 ; Family                ; MAX 10                                ;
@@ -44,13 +44,13 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------+---------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------+
-; MIF/HEX Update Processed Files                                                                         ;
-+--------------------------------------------------------------------------------------------------------+
-; File Name                                                                                              ;
-+--------------------------------------------------------------------------------------------------------+
-; C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/SqGen.mif ;
-+--------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------+
+; MIF/HEX Update Processed Files                                  ;
++-----------------------------------------------------------------+
+; File Name                                                       ;
++-----------------------------------------------------------------+
+; C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/SqGen.mif ;
++-----------------------------------------------------------------+
 
 
 +-------------------------+
@@ -59,17 +59,18 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime MIF/HEX Update
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Sun Nov 15 23:54:26 2020
+    Info: Processing started: Mon Nov 16 22:55:52 2020
 Info: Command: quartus_cdb SCOMP -c SCOMP --update_mif
-Warning (113031): 3 out of 2048 addresses are reinitialized. The latest initialized data will replace the existing data. There are 3 warnings found, and 3 warnings are reported. File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/SqGen.mif Line: 1
-    Warning (113030): Memory Initialization File address 0 is reinitialized File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/ Line: 13
-    Warning (113030): Memory Initialization File address 1 is reinitialized File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/ Line: 14
-    Warning (113030): Memory Initialization File address 2 is reinitialized File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/ Line: 15
+Warning (113031): 4 out of 2048 addresses are reinitialized. The latest initialized data will replace the existing data. There are 4 warnings found, and 4 warnings are reported. File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/SqGen.mif Line: 1
+    Warning (113030): Memory Initialization File address 0 is reinitialized File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/ Line: 13
+    Warning (113030): Memory Initialization File address 1 is reinitialized File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/ Line: 14
+    Warning (113030): Memory Initialization File address 2 is reinitialized File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/ Line: 15
+    Warning (113030): Memory Initialization File address 3 is reinitialized File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/ Line: 16
 Info (39024): Processed the following Memory Initialization File(s)
-    Info (39025): Processed Memory Initialization File C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/SqGen.mif File: C:/Users/Broughton/Documents/ECE 2031/Labs/Final Project/Project Code Github/ECE2031-Project/SqGen.mif Line: 0
-Info: Quartus Prime MIF/HEX Update was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4737 megabytes
-    Info: Processing ended: Sun Nov 15 23:54:27 2020
+    Info (39025): Processed Memory Initialization File C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/SqGen.mif File: C:/Users/Caleb Chang/Documents/GitHub/ECE2031-Project/SqGen.mif Line: 0
+Info: Quartus Prime MIF/HEX Update was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4735 megabytes
+    Info: Processing ended: Mon Nov 16 22:55:53 2020
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
